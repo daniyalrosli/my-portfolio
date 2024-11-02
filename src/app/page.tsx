@@ -1,14 +1,81 @@
-import Navbar from './components/navbar';
+"use client";
+
+import Navbar from './components/navbar'; // Import the Navbar component
+import Image from 'next/image'; // Import the Image component
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importing icons from react-icons
 
 export default function HomePage() {
   return (
-    <main className="bg-black text-white min-h-screen">
-      <Navbar />
-      <section className="h-screen flex flex-col justify-center pl-5"> {/* Left aligned */}
-        <h1 className="text-5xl font-bold mb-4">Hi, I’m Daniyal Rosli</h1>
-        <p className="text-5xl font-bold mb-4">I’m a student, learner &</p>
-        <p className="text-5xl font-bold mb-4">data enthusiast</p>
+   <main className="bg-black text-white min-h-screen">
+      <Navbar /> {/* Render the Navbar here */}
+      <section className="h-screen flex items-center justify-between px-5 bg-gradient-to-r from-gray-900 to-black">
+        {/* Text Section */}
+        <div className="flex flex-col justify-center gap-4 pr-4 animate-fadeInText">
+          <h1 className="text-6xl font-bold mb-2 transition-transform duration-500 ease-in-out transform hover:scale-105 text-white shadow-md">
+            Hi, I’m Daniyal Rosli
+          </h1>
+          <p className="text-4xl font-semibold mb-2 transition-opacity duration-700 ease-in-out hover:opacity-80 text-gray-300">
+            I’m a student, learner &
+          </p>
+          <p className="text-4xl font-semibold mb-2 transition-opacity duration-700 ease-in-out hover:opacity-80 text-gray-300">
+            data enthusiast
+          </p>
+
+          {/* Social Links */}
+          <div className="flex gap-6 mt-6">
+            <a href="https://www.linkedin.com/in/daniyal-rosli-4384731b0/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://github.com/daniyalrosli" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300">
+              <FaGithub size={30} />
+            </a>
+            <a href="daniyalrosli@gmail.com" className="text-gray-300 hover:text-white transition duration-300">
+              <FaEnvelope size={30} />
+            </a>
+          </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="relative w-1/2 h-auto ml-[-20px] animate-slideInRight">
+          <Image 
+            src="/img/IMG_1379-removebg-preview-transformed.png" // Correct path to the image in the public folder
+            alt="Daniyal Rosli"
+            width={500}
+            height={500}
+            className="object-cover rounded-full shadow-lg transform hover:scale-105 transition-transform duration-500 ease-in-out"
+          />
+        </div>
       </section>
+
+      {/* Styling for Animations */}
+      <style jsx>{`
+        @keyframes fadeInText {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes slideInRight {
+          0% {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .animate-fadeInText {
+          animation: fadeInText 1.2s ease-out;
+        }
+        .animate-slideInRight {
+          animation: slideInRight 1.2s ease-out;
+        }
+      `}</style>
     </main>
   );
 }
