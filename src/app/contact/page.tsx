@@ -39,7 +39,7 @@ export default function ContactPage() {
           <a 
             href="mailto:your-email@example.com" 
             className="text-indigo-400 hover:text-indigo-300 transition duration-300">
-            your-email@example.com
+           daniyalrosli@gmail.com
           </a>
         </div>
       </section>
