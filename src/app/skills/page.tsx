@@ -25,11 +25,20 @@ export default function SkillsPage() {
       techStack: ['JavaScript', 'React', 'Next.js', 'Tailwind CSS'],
     },
     {
+      name: 'Version Control & Project Management',
+      description: 'Collaborating on code and managing project tasks effectively.',
+      techStack: ['Git', 'GitHub', 'Jira', 'Trello'],
+    },
+    {
+      name: 'Cloud Computing',
+      description: 'Deploying, managing, and scaling applications in the cloud.',
+      techStack: ['AWS', 'Microsoft Azure', 'Google Cloud Platform', 'Docker', 'Kubernetes'],
+    },
+    {
       name: 'Python',
       description: 'A versatile programming language widely used for data analysis, machine learning, and web development.',
       techStack: ['Python 3.x', 'Flask', 'Django'],
     },
-   
     {
       name: 'SQL',
       description: 'A domain-specific language used in programming and managing relational databases.',

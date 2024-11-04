@@ -27,8 +27,10 @@ export default function Navbar() {
           <li><Link href="/" className="text-white hover:text-gray-300">Home</Link></li>
           <li><Link href="/about" className="text-white hover:text-gray-300">About</Link></li>
           <li><Link href="/skills" className="text-white hover:text-gray-300">Skills</Link></li>
+          <li><Link href="/experiences" className="text-white hover:text-gray-300">Experiences</Link></li>
           <li><Link href="/projects" className="text-white hover:text-gray-300">Projects</Link></li>
           <li><Link href="/contact" className="text-white hover:text-gray-300">Contacts</Link></li>
+
         </ul>
       </div>
     </nav>

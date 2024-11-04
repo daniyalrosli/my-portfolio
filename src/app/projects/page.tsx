@@ -9,7 +9,7 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Heartcare Project */}
           <div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
-            <h3 className="text-2xl font-bold mb-2">Heartcare: Heart Disease Prediction using Machine Learning (Final Year Project)</h3>
+            <h3 className="text-2xl font-bold mb-2">HeartCare: Predictive Analytics for Early Detection and Prevention (Final Year Project)</h3>
             <p className="mb-4">
               A web-based application designed to monitor heart health and provide users with insights based on their
               heart rate data. It utilizes machine learning algorithms to predict potential heart-related issues and
