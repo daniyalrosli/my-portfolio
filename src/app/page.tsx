@@ -87,11 +87,11 @@ export default function HomePage() {
           variants={fadeInRight}
         >
           <Image
-            src="/img/IMG_1379-removebg-preview-transformed.png" // Correct path to the image in the public folder
+            src="/img/pixelcut-export.png" // Correct path to the image in the public folder
             alt="Daniyal Rosli"
             width={500}
             height={500}
-            className="object-cover rounded-full shadow-lg transform hover:scale-105 transition-transform duration-500 ease-in-out"
+            className="object-cover shadow-lg transform hover:scale-105 transition-transform duration-500 ease-in-out"
           />
         </motion.div>
       </section>
