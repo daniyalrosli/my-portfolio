@@ -44,6 +44,16 @@ export default function SkillsPage() {
       description: 'A domain-specific language used in programming and managing relational databases.',
       techStack: ['MySQL', 'PostgreSQL', 'SQLite'],
     },
+
+    {
+
+      name: 'Data Visualization',
+      description: 'Creating visual representations of data to communicate insights and findings.',
+      techStack: ['Matplotlib', 'Seaborn', 'Microsoft Power BI', 'Tableau'],
+
+    }
+
+
     // Add more skills and descriptions as needed
   ];
 

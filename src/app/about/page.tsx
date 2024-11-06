@@ -1,7 +1,8 @@
 "use client";
 
 import Navbar from '../components/navbar';
-import { motion } from 'framer-motion'; // Import framer-motion
+import { motion } from 'framer-motion';
+// Import Link for resume download
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,7 @@ export default function AboutPage() {
         transition={{ duration: 1, ease: "easeOut" }} // Animation duration and easing
       >
         <div className="max-w-4xl w-full text-center space-y-6">
+          {/* Heading */}
           <motion.h2
             className="text-5xl font-extrabold text-white mb-6"
             initial={{ opacity: 0, y: -20 }} // Initial state for heading
@@ -23,17 +25,29 @@ export default function AboutPage() {
           >
             About Me
           </motion.h2>
+
+          {/* Description */}
           <motion.p
             className="text-xl text-gray-300 leading-relaxed tracking-wide shadow-lg p-6 rounded-lg bg-gray-800 bg-opacity-20"
             initial={{ opacity: 0, y: 10 }} // Initial state for the paragraph
             animate={{ opacity: 1, y: 0 }} // Target animation state for paragraph
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }} // Delayed animation for the paragraph
           >
-            A final-year Intelligent Systems Engineering student with a strong passion for data analysis, machine learning, and data engineering. I enjoy exploring complex datasets to uncover meaningful insights and drive decision-making.
+            I’m Daniyal Rosli, a final-year Intelligent Systems Engineering student with a strong passion for data analysis, machine learning, and data engineering. I enjoy exploring complex datasets to uncover meaningful insights and drive decision-making.
             <br />
             <br />
-            Alongside my primary focus on data, I have a budding interest in web development, which allows me to create interactive applications that enhance user experience. My academic journey has equipped me with a solid foundation in programming, algorithms, and statistical modeling, enabling me to tackle real-world problems with innovative solutions.
+            Alongside my primary focus on data, I have a growing interest in web development, allowing me to create interactive applications that enhance user experience. My academic journey has equipped me with a solid foundation in programming, algorithms, and statistical modeling, enabling me to tackle real-world problems with innovative solutions.
           </motion.p>
+
+          {/* Resume Download Link */}
+          <motion.div
+            className="mt-6"
+            initial={{ opacity: 0, y: 10 }} // Initial state for the resume link
+            animate={{ opacity: 1, y: 0 }} // Target animation state
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }} // Delayed animation for resume link
+          >
+        
+          </motion.div>
         </div>
       </motion.section>
     </main>
