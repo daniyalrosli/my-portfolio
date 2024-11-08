@@ -23,7 +23,7 @@ export default function ProjectsPage() {
               <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">Jupyter Notebook</span>
             </div>
             <a 
-              href="https://github.com/your-username/heartcare" // Replace with your project link
+              href="https://github.com/daniyalrosli/Final-Year-Project" // Replace with your project link
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline">
@@ -46,7 +46,7 @@ export default function ProjectsPage() {
               <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">NLTK</span>
             </div>
             <a 
-              href="https://github.com/your-username/suicidal-tweet-detection" // Replace with your project link
+              href="https://github.com/daniyalrosli/Suicidal-Tweet-Detection-on-X" // Replace with your project link
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline">
@@ -107,7 +107,7 @@ sentiment on this complex geopolitical issue through social media data.
 
             </div>
             <a 
-              href="https://github.com/your-username/suicidal-tweet-detection" // Replace with your project link
+              href="https://drive.google.com/file/d/1MXGckPvos-ILC72FxCWcDN1MVba8GZpx/view?usp=sharing" // Replace with your project link
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline">

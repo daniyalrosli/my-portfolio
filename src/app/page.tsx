@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <main className="bg-black text-white min-h-screen">
       <Navbar /> {/* Render the Navbar here */}
-      <section className="h-screen flex items-center justify-between px-5 bg-gradient-to-r from-gray-900 to-black">
+      <section className="h-screen flex items-center justify-between px-5 bg-black">
         {/* Text Section */}
         <motion.div
           className="flex flex-col justify-center gap-4 pr-4"

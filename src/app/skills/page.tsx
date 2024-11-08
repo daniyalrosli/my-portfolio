@@ -44,33 +44,29 @@ export default function SkillsPage() {
       description: 'A domain-specific language used in programming and managing relational databases.',
       techStack: ['MySQL', 'PostgreSQL', 'SQLite'],
     },
-
     {
-
       name: 'Data Visualization',
       description: 'Creating visual representations of data to communicate insights and findings.',
       techStack: ['Matplotlib', 'Seaborn', 'Microsoft Power BI', 'Tableau'],
-
     }
-
-
-    // Add more skills and descriptions as needed
   ];
 
   return (
     <main className="bg-black text-white min-h-screen">
       <Navbar />
-      <section className="flex items-center justify-center h-screen p-8">
+      <section className="flex items-center justify-center min-h-screen p-4 sm:p-8">
         <div className="max-w-6xl w-full">
-          <h2 className="text-4xl font-bold mb-8 text-center text-gray-100">My Skills</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-gray-100">
+            My Skills
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {skills.map((skill, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                <p className="text-gray-300 mb-2">{skill.description}</p>
+              <div key={index} className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{skill.name}</h3>
+                <p className="text-gray-300 mb-2 text-sm sm:text-base">{skill.description}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {skill.techStack.map((tech, techIndex) => (
-                    <span key={techIndex} className="bg-gray-700 text-sm px-3 py-1 rounded-full">
+                    <span key={techIndex} className="bg-gray-700 text-xs sm:text-sm px-3 py-1 rounded-full">
                       {tech}
                     </span>
                   ))}
