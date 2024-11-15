@@ -41,8 +41,24 @@ export default function AboutPage() {
             <br />
             Throughout my projects and internships, I have consistently demonstrated the ability to complete tasks efficiently within the given timeframe— with the help of ChatGPT of course 😉. This has strengthened my problem-solving skills, time management, and adaptability, allowing me to balance competing priorities while maintaining high standards of quality in my work.
           </motion.p>
+  
+            <motion.div
+              className="mt-4 sm:mt-6"
+              initial={{ opacity: 0, y: 10 }} // Initial state for the resume section
+              animate={{ opacity: 1, y: 0 }} // Target animation state
+              transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }} // Delayed animation for resume section
+            >
+            
+              <a
+                href="/Users/daniyalrosli/my-portfolio/public/daniyal_resume (updated) (1).pdf"
+             
+                className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+              >
+                Download Resume
+              </a>
+            </motion.div>
+          
 
-          {/* Resume Download Link */}
           <motion.div
             className="mt-4 sm:mt-6"
             initial={{ opacity: 0, y: 10 }} // Initial state for the resume link
