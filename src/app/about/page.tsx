@@ -50,7 +50,7 @@ export default function AboutPage() {
             >
             
               <a
-                href="/Users/daniyalrosli/my-portfolio/public/daniyal_resume (updated) (1).pdf"
+              href="public/daniyal_resume (updated) (1).pdf"
              
                 className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
               >

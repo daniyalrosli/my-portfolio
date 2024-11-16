@@ -18,7 +18,10 @@ const experiences: Experience[] = [
     period: "2023 — 2023",
     isRemote: true,
     points: [
-      "Responsible for frontend development for Kitahack 2024's website with other team members"
+      "Responsible for frontend development for Kitahack 2024's website with other team members",
+      "Utilized Angular for the front-end development",
+      "Optimizes web performance with other team members",
+      "Collaborated with other team members to find and fix bugs"
     ]
   },
   {

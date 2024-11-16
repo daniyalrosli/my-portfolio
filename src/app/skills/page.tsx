@@ -27,12 +27,12 @@ export default function SkillsPage() {
     {
       name: 'Version Control & Project Management',
       description: 'Collaborating on code and managing project tasks effectively.',
-      techStack: ['Git', 'GitHub', 'Jira', 'Trello'],
+      techStack: ['Git', 'GitHub', 'GitLab', ],
     },
     {
       name: 'Cloud Computing',
       description: 'Deploying, managing, and scaling applications in the cloud.',
-      techStack: ['AWS', 'Microsoft Azure', 'Google Cloud Platform', 'Docker', 'Kubernetes'],
+      techStack: ['AWS', 'Microsoft Azure', 'Google Cloud Platform', 'Docker', ],
     },
     {
       name: 'Python',

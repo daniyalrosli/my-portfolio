@@ -115,7 +115,55 @@ sentiment on this complex geopolitical issue through social media data.
             </a>
           </div>
 
+          {/* InsureXpert*/} 
 
+              <div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
+              <h3 className="text-2xl font-bold mb-2">InsureXpert: Insurance Predictive System</h3>
+            <p className="mb-4">
+              
+              InsureXpert is an AI-powered application that predicts insurance claim amounts using machine learning. It helps insurance companies improve decision-making by forecasting claim amounts based on various factors like age, BMI, smoking status, and more.
+
+
+
+              </p>
+              <h4 className="font-semibold">Tech Stack:</h4>
+              <div className="flex flex-wrap gap-2 mb-4">
+              <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Nextjs</span>
+              <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Python</span>
+              <span className="inline-block bg-purple-600 text-xs text-white rounded-full px-3 py-1">Machine Learning</span>
+              <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">Jupyter Notebook</span>
+              
+              </div>
+              <a 
+                href="https://github.com/daniyalrosli/InsureXpert" // Replace with your project link
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline">
+                View Project
+              </a>
+          </div>
+          
+            {/* Predictive Maintenance System */}
+            <div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
+            <h3 className="text-2xl font-bold mb-2">Predictive Maintenance System</h3>
+            <p className="mb-4">
+              A system designed to predict equipment failures before they occur, allowing for timely maintenance and reducing downtime. It uses machine learning algorithms to analyze sensor data and predict potential issues.
+            </p>
+            <h4 className="font-semibold">Tech Stack:</h4>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Python</span>
+              <span className="inline-block bg-green-600 text-xs text-white rounded-full px-3 py-1">TensorFlow</span>
+              <span className="inline-block bg-purple-600 text-xs text-white rounded-full px-3 py-1">Machine Learning</span>
+              <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">IoT</span>
+            </div>
+            <a 
+              href="https://github.com/daniyalrosli/Predictive-Maintenance-System" // Replace with your project link
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline">
+              View Project
+            </a>
+            </div>
 
 
         </div>
