@@ -50,7 +50,7 @@ export default function AboutPage() {
             >
             
               <a
-              href="public/daniyal_resume (updated) (1).pdf"
+              href="https://drive.google.com/file/d/1PovNhTzgKBe51tuA2ozDn6b8lha_OLBA/view?usp=sharing"
              
                 className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
               >
