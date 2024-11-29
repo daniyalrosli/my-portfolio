@@ -87,7 +87,7 @@ export default function HomePage() {
           variants={fadeInRight}
         >
           <Image
-            src="/img/f.png"
+            src="/img/f_upscaled.png"
             // Correct path to the image in the public folder
             alt="Daniyal Rosli"
             width={500}
