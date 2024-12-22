@@ -5,47 +5,47 @@ export default function SkillsPage() {
   // Array of skills with descriptions
   const skills = [
     {
-      name: 'Data Analysis',
+      name: 'Data Analysis 📊',
       description: 'Interpreting complex data sets to inform business decisions and identify trends.',
       techStack: ['Python', 'R', 'Pandas', 'NumPy', 'Tableau'],
     },
     {
-      name: 'Machine Learning',
+      name: 'Machine Learning 🤖',
       description: 'Developing algorithms that enable systems to learn and make predictions from data.',
       techStack: ['Python', 'TensorFlow', 'scikit-learn', 'Keras'],
     },
     {
-      name: 'Data Engineering',
+      name: 'Data Engineering 🛠️',
       description: 'Building infrastructure and architecture for data generation, storage, and processing.',
       techStack: ['Python', 'SQL', 'Apache Spark', 'Kafka', 'Airflow'],
     },
     {
-      name: 'Web Development',
+      name: 'Web Development 🌐',
       description: 'Creating responsive and interactive websites and applications using modern technologies.',
       techStack: ['JavaScript', 'React', 'Next.js', 'Tailwind CSS'],
     },
     {
-      name: 'Version Control & Project Management',
+      name: 'Version Control & Project Management 📁',
       description: 'Collaborating on code and managing project tasks effectively.',
-      techStack: ['Git', 'GitHub', 'GitLab', ],
+      techStack: ['Git', 'GitHub', 'GitLab'],
     },
     {
-      name: 'Cloud Computing',
+      name: 'Cloud Computing ☁️ (Still newbie)',
       description: 'Deploying, managing, and scaling applications in the cloud.',
-      techStack: ['AWS', 'Microsoft Azure', 'Google Cloud Platform', 'Docker', ],
+      techStack: ['AWS', 'Microsoft Azure', 'Google Cloud Platform', 'Docker'],
     },
     {
-      name: 'Python',
+      name: 'Python 🐍',
       description: 'A versatile programming language widely used for data analysis, machine learning, and web development.',
       techStack: ['Python 3.x', 'Flask', 'Django'],
     },
     {
-      name: 'SQL',
+      name: 'SQL 🗄️',
       description: 'A domain-specific language used in programming and managing relational databases.',
       techStack: ['MySQL', 'PostgreSQL', 'SQLite'],
     },
     {
-      name: 'Data Visualization',
+      name: 'Data Visualization 📈',
       description: 'Creating visual representations of data to communicate insights and findings.',
       techStack: ['Matplotlib', 'Seaborn', 'Microsoft Power BI', 'Tableau'],
     }
