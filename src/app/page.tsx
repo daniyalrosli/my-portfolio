@@ -1,98 +1,78 @@
 "use client";
 
-import Navbar from './components/navbar'; // Import the Navbar component
-import Image from 'next/image'; // Import the Image component
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importing icons from react-icons
-import { motion } from 'framer-motion'; // Import Framer Motion
+import Navbar from "./components/navbar"; // Import the Navbar component
+import Image from "next/image"; // Import the Image component
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; // Importing icons from react-icons
+import { motion } from "framer-motion"; // Import the motion component
 
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
 const fadeInRight = {
   hidden: { opacity: 0, x: 100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1.2, ease: "easeOut" } }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
 };
 
 export default function HomePage() {
   return (
     <main className="bg-black text-white min-h-screen">
-      <Navbar /> {/* Render the Navbar here */}
-      <section className="h-screen flex items-center justify-between px-5 bg-black">
+      <Navbar />
+      <section className="h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 md:px-20">
         {/* Text Section */}
         <motion.div
-          className="flex flex-col justify-center gap-4 pr-4"
+          className="flex flex-col gap-4 max-w-lg text-center md:text-left"
           initial="hidden"
           animate="visible"
-          variants={staggerContainer}
+          variants={fadeInUp}
         >
-          <motion.h1
-            className="text-6xl font-bold mb-2 transition-transform duration-500 ease-in-out transform hover:scale-105 text-white shadow-md"
-            variants={fadeInUp}
-          >
-            Hi, I’m Daniyal Rosli
-          </motion.h1>
-          <motion.p
-            className="text-4xl font-semibold mb-2 transition-opacity duration-700 ease-in-out hover:opacity-80 text-gray-300"
-            variants={fadeInUp}
-          >
-            I’m a student, learner &
-          </motion.p>
-          <motion.p
-            className="text-4xl font-semibold mb-2 transition-opacity duration-700 ease-in-out hover:opacity-80 text-gray-300"
-            variants={fadeInUp}
-          >
-            data enthusiast
-          </motion.p>
-
+          <h1 className="text-5xl md:text-6xl font-bold text-white">
+            Hi, I’m <span className="text-blue-500">Daniyal Rosli</span>
+          </h1>
+          <p className="text-xl text-gray-400">
+            I’m a student, lifelong learner, and passionate data enthusiast.
+          </p>
           {/* Social Links */}
-          <motion.div className="flex gap-6 mt-6" variants={fadeInUp}>
+          <div className="flex justify-center md:justify-start gap-5 mt-5">
             <a
               href="https://www.linkedin.com/in/daniyal-rosli-4384731b0/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition duration-300"
+              className="text-gray-400 hover:text-blue-500 transition"
             >
-              <FaLinkedin size={30} />
+              <FaLinkedin size={28} />
             </a>
             <a
               href="https://github.com/daniyalrosli"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition duration-300"
+              className="text-gray-400 hover:text-white transition"
             >
-              <FaGithub size={30} />
+              <FaGithub size={28} />
             </a>
             <a
               href="mailto:daniyalrosli@gmail.com"
-              className="text-gray-300 hover:text-white transition duration-300"
+              className="text-gray-400 hover:text-red-500 transition"
             >
-              <FaEnvelope size={30} />
+              <FaEnvelope size={28} />
             </a>
-          </motion.div>
+          </div>
         </motion.div>
 
         {/* Image Section */}
         <motion.div
-          className="relative w-1/2 h-auto ml-[-20px]"
+          className="w-64 h-64 md:w-80 md:h-80 relative"
           initial="hidden"
           animate="visible"
           variants={fadeInRight}
         >
           <Image
             src="/img/me.png"
-            // Correct path to the image in the public folder
             alt="Daniyal Rosli"
-            width={500}
-            height={500}
-            className="object-cover shadow-lg transform hover:scale-105 transition-transform duration-500 ease-in-out"
+            fill
+            className="rounded-full object-cover shadow-md"
           />
         </motion.div>
       </section>
