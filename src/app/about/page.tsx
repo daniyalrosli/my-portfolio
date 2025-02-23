@@ -44,7 +44,7 @@ export default function AboutPage() {
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
           >
             <a
-              href="https://drive.google.com/file/d/1PovNhTzgKBe51tuA2ozDn6b8lha_OLBA/view?usp=sharing"
+              href="https://drive.google.com/file/d/1lQaexSBTtJ5Oa9UDebPJca4_IZ1tC3tW/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
