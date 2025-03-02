@@ -168,9 +168,9 @@ sentiment on this complex geopolitical issue through social media data.
          {/* TextFilter: SMS Spam Classification Model */}
 <div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
   <h3 className="text-2xl font-bold mb-2">TextFilter: SMS Spam Classification</h3>
-  <p className="mb-4">
-    A machine learning model that classifies SMS messages as either "Spam" or "Real (Ham)," improving message filtering efficiency and ensuring a cleaner, spam-free inbox. 
-  </p>
+<p className="mb-4">
+  A machine learning model that classifies SMS messages as either &quot;Spam&quot; or &quot;Real (Ham),&quot; improving message filtering efficiency and ensuring a cleaner, spam-free inbox.
+</p>
   <h4 className="font-semibold">Tech Stack:</h4>
   <div className="flex flex-wrap gap-2 mb-4">
     <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Python</span>
