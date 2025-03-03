@@ -187,6 +187,72 @@ sentiment on this complex geopolitical issue through social media data.
   </a>
 </div>
           
+{/* ReviewSense: Advanced Sentiment Analysis for E-Commerce Reviews */}
+<div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
+  <h3 className="text-2xl font-bold mb-2">ReviewSense: Advanced Sentiment Analysis</h3>
+  <p className="mb-4">
+    A sentiment analysis model that processes and classifies customer reviews for e-commerce platforms, providing insights into user satisfaction and product quality.
+  </p>
+  <h4 className="font-semibold">Tech Stack:</h4>
+  <div className="flex flex-wrap gap-2 mb-4">
+    <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Python</span>
+    <span className="inline-block bg-green-600 text-xs text-white rounded-full px-3 py-1">Scikit-learn</span>
+    <span className="inline-block bg-purple-600 text-xs text-white rounded-full px-3 py-1">NLP</span>
+    <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">Machine Learning</span>
+  </div>
+  <a 
+    href="https://github.com/daniyalrosli/reviewsense" // Replace with your project link
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-blue-400 hover:underline">
+    View Project
+  </a>
+          </div>
+          
+          {/* Employee Attrition Analysis */}
+<div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
+  <h3 className="text-2xl font-bold mb-2">Employee Attrition Analysis</h3>
+  <p className="mb-4">
+    A data-driven analysis of factors influencing employee attrition using advanced techniques in Excel, SQL, and Power BI to identify trends, patterns, and key drivers behind employee turnover.
+  </p>
+  <h4 className="font-semibold">Tech Stack:</h4>
+  <div className="flex flex-wrap gap-2 mb-4">
+    <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Excel</span>
+    <span className="inline-block bg-green-600 text-xs text-white rounded-full px-3 py-1">SQL</span>
+    <span className="inline-block bg-purple-600 text-xs text-white rounded-full px-3 py-1">Power BI</span>
+    <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">Data Analysis</span>
+  </div>
+  <a 
+    href="https://github.com/daniyalrosli/empattri" // Replace with your project link
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-blue-400 hover:underline">
+    View Project
+  </a>
+          </div>
+          
+          {/* FraudShield: Bank Transaction Fraud Detection */}
+<div className="p-6 border border-gray-600 rounded-lg bg-gray-800 transition-transform transform hover:scale-105 hover:shadow-lg">
+  <h3 className="text-2xl font-bold mb-2">FraudShield: Bank Transaction Fraud Detection</h3>
+  <p className="mb-4">
+    A machine learning-based system designed to detect fraudulent transactions in banking datasets. By identifying anomalies and suspicious patterns, it enhances financial security and fraud prevention.
+  </p>
+  <h4 className="font-semibold">Tech Stack:</h4>
+  <div className="flex flex-wrap gap-2 mb-4">
+    <span className="inline-block bg-blue-600 text-xs text-white rounded-full px-3 py-1">Python</span>
+    <span className="inline-block bg-green-600 text-xs text-white rounded-full px-3 py-1">Scikit-learn</span>
+    <span className="inline-block bg-purple-600 text-xs text-white rounded-full px-3 py-1">Machine Learning</span>
+    <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">Anomaly Detection</span>
+  </div>
+  <a 
+    href="https://github.com/daniyalrosli/FraudAnalytics" // Replace with your project link
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-blue-400 hover:underline">
+    View Project
+  </a>
+</div>
+          
 
             
           
