@@ -135,7 +135,7 @@ sentiment on this complex geopolitical issue through social media data.
               
               </div>
               <a 
-                href="https://github.com/daniyalrosli/InsureXpert" // Replace with your project link
+                href="https://github.com/daniyalrosli/isp624-project" // Replace with your project link
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline">
@@ -157,7 +157,7 @@ sentiment on this complex geopolitical issue through social media data.
               <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">IoT</span>
             </div>
             <a 
-              href="https://github.com/daniyalrosli/Predictive-Maintenance-System" // Replace with your project link
+              href="https://github.com/daniyalrosli/Machine-Failure-Prediction-using-Sensor-data" // Replace with your project link
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline">
