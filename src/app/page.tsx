@@ -69,7 +69,7 @@ export default function HomePage() {
           variants={fadeInRight}
         >
           <Image
-            src="/img/me.png"
+            src="/img/m.jpeg"
             alt="Daniyal Rosli"
             fill
             className="rounded-full object-cover shadow-md"
