@@ -245,7 +245,7 @@ sentiment on this complex geopolitical issue through social media data.
     <span className="inline-block bg-red-600 text-xs text-white rounded-full px-3 py-1">Anomaly Detection</span>
   </div>
   <a 
-    href="https://github.com/daniyalrosli/FraudAnalytics" // Replace with your project link
+    href="https://github.com/daniyalrosli/FraudAnalytics" 
     target="_blank" 
     rel="noopener noreferrer"
     className="text-blue-400 hover:underline">

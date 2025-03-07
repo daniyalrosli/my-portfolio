@@ -1,11 +1,11 @@
 "use client";
 
-import Navbar from '../components/navbar';
-import { motion } from 'framer-motion';
+import Navbar from "../components/navbar";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-gradient-to-b from-black to-gray-900 text-white min-h-screen">
       <Navbar />
       <motion.section
         className="flex flex-col items-center justify-center min-h-screen px-6 sm:px-12 py-8"
@@ -13,9 +13,9 @@ export default function AboutPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="max-w-3xl w-full text-center space-y-8">
+        <div className="max-w-3xl w-full text-center space-y-10">
           <motion.h2
-            className="text-4xl sm:text-6xl font-bold text-white mb-4"
+            className="text-5xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 mb-6"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -24,7 +24,7 @@ export default function AboutPage() {
           </motion.h2>
 
           <motion.p
-            className="text-lg sm:text-xl text-gray-300 leading-relaxed tracking-wide shadow-lg p-6 bg-gray-800 bg-opacity-30 rounded-lg text-justify"
+            className="text-lg sm:text-xl text-gray-300 leading-relaxed tracking-wide p-6 bg-gray-800 bg-opacity-50 rounded-xl shadow-lg text-justify"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
@@ -47,9 +47,9 @@ export default function AboutPage() {
               href="https://drive.google.com/file/d/1lQaexSBTtJ5Oa9UDebPJca4_IZ1tC3tW/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition duration-300"
             >
-              Download Resume
+              📄 Download Resume
             </a>
           </motion.div>
         </div>

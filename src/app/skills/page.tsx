@@ -1,8 +1,8 @@
 "use client";
 import Navbar from '../components/navbar';
+import { motion } from 'framer-motion';
 
 export default function SkillsPage() {
-  // Array of skills with descriptions
   const skills = [
     {
       name: 'Data Analysis 📊',
@@ -25,12 +25,17 @@ export default function SkillsPage() {
       techStack: ['JavaScript', 'React', 'Next.js', 'Tailwind CSS'],
     },
     {
+      name: 'Data Visualization 📈',
+      description: 'Creating meaningful visual representations of data to communicate insights effectively.',
+      techStack: ['Matplotlib', 'Seaborn', 'Power BI', 'Tableau', 'Plotly'],
+    },
+    {
       name: 'Version Control & Project Management 📁',
       description: 'Collaborating on code and managing project tasks effectively.',
       techStack: ['Git', 'GitHub', 'GitLab'],
     },
     {
-      name: 'Cloud Computing ☁️ (Still newbie)',
+      name: 'Cloud Computing ☁️',
       description: 'Deploying, managing, and scaling applications in the cloud.',
       techStack: ['AWS', 'Microsoft Azure', 'Google Cloud Platform', 'Docker'],
     },
@@ -43,25 +48,31 @@ export default function SkillsPage() {
       name: 'SQL 🗄️',
       description: 'A domain-specific language used in programming and managing relational databases.',
       techStack: ['MySQL', 'PostgreSQL', 'SQLite'],
-    },
-    {
-      name: 'Data Visualization 📈',
-      description: 'Creating visual representations of data to communicate insights and findings.',
-      techStack: ['Matplotlib', 'Seaborn', 'Microsoft Power BI', 'Tableau'],
     }
   ];
 
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-gradient-to-b from-black to-gray-900 text-white min-h-screen">
       <Navbar />
       <section className="flex items-center justify-center min-h-screen p-4 sm:p-8">
         <div className="max-w-6xl w-full">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-gray-100">
+          <motion.h2
+            className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          >
             My Skills
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {skills.map((skill, index) => (
-              <div key={index} className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
+              <motion.div
+                key={index}
+                className="bg-gray-800 bg-opacity-60 backdrop-blur-md p-4 sm:p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl relative overflow-hidden group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: index * 0.1 }}
+              >
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">{skill.name}</h3>
                 <p className="text-gray-300 mb-2 text-sm sm:text-base">{skill.description}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
@@ -71,28 +82,11 @@ export default function SkillsPage() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Styling for Animations */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 1s ease-out forwards;
-        }
-      `}</style>
     </main>
   );
 }
