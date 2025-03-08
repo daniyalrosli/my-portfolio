@@ -32,7 +32,7 @@ export default function HomePage() {
             Hi, I’m <span className="text-blue-500">Daniyal Rosli</span>
           </h1>
           <p className="text-xl text-gray-400">
-            I’m a student, lifelong learner, and passionate data enthusiast.
+            I’m a student, lifelong learner, and passionate data enthusiast. Currently a Data Analyst Software Engineer Intern at AMD
           </p>
           {/* Social Links */}
           <div className="flex justify-center md:justify-start gap-5 mt-5">
