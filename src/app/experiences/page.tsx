@@ -18,7 +18,7 @@ const experiences: Experience[] = [
     role: "Data Analyst Software Engineer Intern",
     company: "Advanced Micro Devices (AMD)",
     location: "Penang, Malaysia",
-    period: "Upcoming (March 2025 — September 2025)",
+    period: "(March 2025 — September 2025)",
     isRemote: false,
     logo: "/img/amd.png",
     points: ["Will be coming"],
