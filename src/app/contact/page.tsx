@@ -165,7 +165,7 @@ export default function ContactPage() {
                   <h3 className="font-semibold font-poppins text-lg text-gray-100">Best Way to Reach Me</h3>
                   <p className="text-gray-400 mt-1">Preferred contact method</p>
                   <p className="text-gray-300 mt-2">
-                    Email or LinkedIn message
+                    Email or LinkedIn messages
                   </p>
                 </div>
               </div>
