@@ -1,7 +1,8 @@
 "use client";
 import Navbar from '../components/navbar';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaTools, FaChevronRight } from 'react-icons/fa';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { FaGithub, FaCode, FaTools, FaChevronRight } from 'react-icons/fa';
 
 export default function ProjectsPage() {
   const projects = [
