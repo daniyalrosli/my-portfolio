@@ -147,7 +147,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="relative w-full h-full rounded-full border-2 border-blue-500/30 p-1">
               <Image
-                src="/img/m.jpeg"
+                src="/img/t.jpeg"
                 alt="Daniyal Rosli"
                 fill
                 className="rounded-full object-cover shadow-lg"
