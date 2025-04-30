@@ -16,15 +16,22 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-  {
-    role: "Data Analyst Software Engineer Intern",
-    company: "Advanced Micro Devices (AMD)",
-    location: "Penang, Malaysia",
-    period: "March 2025 — Present",
-    isRemote: false,
-    logo: "/img/amd.png",
-    points: ["Will be coming"],
-  },
+{
+  role: "Data Analyst Software Engineer Intern",
+  company: "Advanced Micro Devices (AMD)",
+  location: "Penang, Malaysia",
+  period: "March 2025 — Present",
+  isRemote: false,
+  logo: "/img/amd.png",
+  points: [
+    "Collected, cleaned, and analyzed large datasets to drive business decisions, identify trends, and improve processes.",
+    "Developed interactive Power BI dashboards with AI and machine learning features to deliver predictive insights to stakeholders.",
+    "Automated data workflows and reporting using SQL, Python, Power Automate, and Power Query, improving efficiency and accuracy.",
+    "Extracted, integrated, and managed data from APIs and SQL Server databases for real-time and scheduled analytics.",
+    "Collaborated with cross-functional teams to ensure data quality, maintain governance standards, and design user-friendly dashboard interfaces.",
+    "Documented data processes, analysis workflows, and dashboard functionalities to support project continuity and knowledge sharing."
+  ]
+},
   {
     role: "Member of Tech Team",
     company: "GDSC Malaysia",

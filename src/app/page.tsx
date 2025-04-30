@@ -3,7 +3,8 @@ import Navbar from "./components/navbar";
 import Image from "next/image";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Inter, Poppins } from 'next/font/google'; // Import clean, modern fonts
+import { Inter, Poppins } from 'next/font/google';
+import Link from "next/link";// Import clean, modern fonts
 
 // Font configuration
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -90,9 +91,12 @@ export default function HomePage() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="mt-2"
           >
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20">
-              View My Projects
-            </button>
+          
+            <Link href="/projects">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20">
+                View My Projects
+              </button>
+            </Link>
           </motion.div>
           
           {/* Social Links */}
