@@ -75,7 +75,20 @@ export default function ProjectsPage() {
       image: "/img/textfilter.jpg", // Add your image path here
       category: "Classification",
       gradient: "from-purple-600 to-pink-600"
-    }
+    },
+
+ {
+  title: "BookLens",
+  subtitle: "Personalized Book Recommendation System",
+  description: "An intelligent recommendation engine that suggests books based on user preferences using metadata like author, publisher, and publication year, helping users discover new reads effortlessly.",
+  techStack: ["Python", "FastAPI", "Flask", "Next.js", "MySQL", "MongoDB", "Machine Learning"],
+  link: "https://github.com/daniyalrosli/BookLens", // Replace with your actual GitHub repo link
+  image: "/img/booklens.jpg", // Add your image path here
+  category: "Recommendation System",
+  gradient: "from-green-500 to-blue-500"
+},
+
+
   ];
   
   // Animation variants
