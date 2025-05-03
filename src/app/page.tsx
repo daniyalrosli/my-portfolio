@@ -72,7 +72,7 @@ export default function HomePage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.4 }}
             >
-              Currently @ AMD
+              Data Scientist
             </motion.div>
             
             <h1 className="text-5xl md:text-6xl font-bold font-poppins text-white tracking-tight">
