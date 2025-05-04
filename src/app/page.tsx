@@ -80,7 +80,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl text-gray-300 mt-4 leading-relaxed">
-              I&apos;m a student, lifelong learner, and passionate data enthusiast. Currently working as a Data Analyst Software Engineer Intern.
+              I&apos;m a student, lifelong learner, and passionate data enthusiast. Currently working as a Data Analyst Software Engineer Intern at AMD.
             </p>
           </div>
           
