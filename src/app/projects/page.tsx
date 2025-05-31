@@ -17,6 +17,26 @@ export default function ProjectsPage() {
       gradient: "from-blue-600 to-purple-600"
     },
     {
+      title: "Customer Creditworthiness Prediction",
+      subtitle: "Machine Learning Risk Assessment System",
+      description: "A comprehensive machine learning system that evaluates customer creditworthiness to assist financial institutions in making informed lending decisions. The model analyzes various financial and demographic factors to predict default risk and credit scores.",
+      techStack: ["Python", "Scikit-learn", "Pandas", "Machine Learning", "Data Analysis"],
+      link: "https://github.com/daniyalrosli/Customer-Creditworthiness-Prediction-Using-Machine-Learning",
+      image: "/img/creditworthiness.jpg", // Add your image path here
+      category: "Financial Analytics",
+      gradient: "from-emerald-600 to-green-600"
+    },
+    {
+      title: "ML-Powered Property Investment Analysis",
+      subtitle: "Real Estate Investment Intelligence for Penang",
+      description: "An advanced analytics platform that leverages machine learning to analyze property investment opportunities in Penang. The system evaluates market trends, property values, rental yields, and investment potential to guide real estate investment decisions.",
+      techStack: ["Python", "Machine Learning", "Data Analysis", "Real Estate Analytics", "Predictive Modeling"],
+      link: "https://github.com/daniyalrosli/propertydata.git", // Replace with your actual GitHub repo link when available
+      image: "/img/property.jpg", // Add your image path here
+      category: "Real Estate Analytics",
+      gradient: "from-orange-600 to-red-600"
+    },
+    {
       title: "Suicidal Tweet Detection",
       subtitle: "NLP-based Sentiment Analysis",
       description: "An AI-driven project that analyzes tweets to identify potential suicidal sentiments. It uses natural language processing and machine learning techniques to classify tweets and provide insights for mental health awareness.",
@@ -76,19 +96,16 @@ export default function ProjectsPage() {
       category: "Classification",
       gradient: "from-purple-600 to-pink-600"
     },
-
- {
-  title: "BookLens",
-  subtitle: "Personalized Book Recommendation System",
-  description: "An intelligent recommendation engine that suggests books based on user preferences using metadata like author, publisher, and publication year, helping users discover new reads effortlessly.",
-  techStack: ["Python", "FastAPI", "Flask", "Next.js", "MySQL", "MongoDB", "Machine Learning"],
-  link: "https://github.com/daniyalrosli/BookLens", // Replace with your actual GitHub repo link
-  image: "/img/booklens.jpg", // Add your image path here
-  category: "Recommendation System",
-  gradient: "from-green-500 to-blue-500"
-},
-
-
+    {
+      title: "BookLens",
+      subtitle: "Personalized Book Recommendation System",
+      description: "An intelligent recommendation engine that suggests books based on user preferences using metadata like author, publisher, and publication year, helping users discover new reads effortlessly.",
+      techStack: ["Python", "FastAPI", "Flask", "Next.js", "MySQL", "MongoDB", "Machine Learning"],
+      link: "https://github.com/daniyalrosli/BookLens", // Replace with your actual GitHub repo link
+      image: "/img/booklens.jpg", // Add your image path here
+      category: "Recommendation System",
+      gradient: "from-green-500 to-blue-500"
+    }
   ];
   
   // Animation variants
