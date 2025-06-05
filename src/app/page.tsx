@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Inter, Poppins } from 'next/font/google';
-import Link from "next/link";// Import clean, modern fonts
+import Link from "next/link";
 
 // Font configuration
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -14,7 +14,7 @@ const poppins = Poppins({
   variable: '--font-poppins'
 });
 
-// Enhanced animation variants
+// Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -54,20 +54,20 @@ const itemAnimation = {
 
 export default function HomePage() {
   return (
-    <main className={`bg-gradient-to-br from-gray-950 to-gray-900 text-white min-h-screen ${inter.variable} ${poppins.variable} font-inter`}>
+    <main className={`bg-black text-white min-h-screen ${inter.variable} ${poppins.variable} font-inter`}>
       <Navbar />
       
       <section className="h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-6 md:px-20 max-w-7xl mx-auto">
         {/* Text Section */}
         <motion.div
-          className="flex flex-col gap-6 max-w-lg text-center md:text-left"
+          className="flex flex-col gap-8 max-w-lg text-center md:text-left"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
         >
           <div>
             <motion.div 
-              className="inline-block bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-medium mb-4"
+              className="inline-block bg-blue-600/20 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.4 }}
@@ -75,11 +75,11 @@ export default function HomePage() {
               Data Scientist
             </motion.div>
             
-            <h1 className="text-5xl md:text-6xl font-bold font-poppins text-white tracking-tight">
-              Hi, I&apos;m <span className="text-blue-500">Daniyal Rosli</span>
+            <h1 className="text-5xl md:text-6xl font-bold font-poppins text-white tracking-tight leading-tight">
+              Hi, I&apos;m <span className="text-blue-400">Daniyal Rosli</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mt-4 leading-relaxed">
+            <p className="text-lg text-gray-300 mt-4 leading-relaxed">
               I&apos;m a student, lifelong learner, and passionate data enthusiast. Currently working as a Data Analyst Software Engineer Intern at AMD.
             </p>
           </div>
@@ -89,11 +89,10 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-2"
+            className="mt-4"
           >
-          
             <Link href="/projects">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20">
+              <button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20">
                 View My Projects
               </button>
             </Link>
@@ -101,7 +100,7 @@ export default function HomePage() {
           
           {/* Social Links */}
           <motion.div 
-            className="flex justify-center md:justify-start gap-6 mt-4"
+            className="flex justify-center md:justify-start gap-8 mt-6"
             variants={staggerChildren}
             initial="hidden"
             animate="visible"
@@ -111,33 +110,33 @@ export default function HomePage() {
               href="https://www.linkedin.com/in/daniyal-rosli-4384731b0/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+              className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
               aria-label="LinkedIn"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={28} />
             </motion.a>
             <motion.a
               variants={itemAnimation}
               href="https://github.com/daniyalrosli"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
               aria-label="GitHub"
             >
-              <FaGithub size={24} />
+              <FaGithub size={28} />
             </motion.a>
             <motion.a
               variants={itemAnimation}
               href="mailto:daniyalrosli@gmail.com"
-              className="text-gray-400 hover:text-red-400 transition-colors duration-300"
+              className="text-gray-400 hover:text-red-400 transition-all duration-300 transform hover:scale-110"
               aria-label="Email"
             >
-              <FaEnvelope size={24} />
+              <FaEnvelope size={28} />
             </motion.a>
           </motion.div>
         </motion.div>
         
-        {/* Image Section - Enhanced with glow effect */}
+        {/* Image Section - Enhanced with refined glow effect */}
         <motion.div
           className="relative"
           initial="hidden"
@@ -145,16 +144,16 @@ export default function HomePage() {
           variants={fadeInRight}
         >
           <div className="w-64 h-64 md:w-80 md:h-80 relative">
-            {/* Glow effect */}
-            <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-xl animate-pulse" />
+            {/* Subtle glow effect */}
+            <div className="absolute inset-0 rounded-full bg-blue-400/10 blur-2xl animate-pulse opacity-50" />
             
             {/* Image */}
-            <div className="relative w-full h-full rounded-full border-2 border-blue-500/30 p-1">
+            <div className="relative w-full h-full rounded-full border-2 border-blue-400/30 p-1.5">
               <Image
                 src="/img/q.jpeg"
                 alt="Daniyal Rosli"
                 fill
-                className="rounded-full object-cover shadow-lg"
+                className="rounded-full object-cover shadow-xl"
                 quality={90}
                 priority
               />
