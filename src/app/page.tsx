@@ -1,164 +1,141 @@
 "use client";
 import Navbar from "./components/navbar";
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins } from "next/font/google";
 import Link from "next/link";
 
-// Font configuration
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const poppins = Poppins({ 
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-poppins'
+// Font setup
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const poppins = Poppins({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } 
-  },
-};
-
-const fadeInRight = {
-  hidden: { opacity: 0, x: 60 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
 const staggerChildren = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 };
 
 const itemAnimation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
 
 export default function HomePage() {
   return (
-    <main className={`bg-black text-white min-h-screen ${inter.variable} ${poppins.variable} font-inter`}>
+    <main
+      className={`bg-black text-white min-h-screen ${inter.variable} ${poppins.variable} font-inter relative overflow-hidden`}
+    >
+      {/* Background Geometric Patterns */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
+        <div className="absolute top-24 left-20 w-32 h-32 border border-white rotate-45 animate-pulse" />
+        <div
+          className="absolute top-60 right-28 w-24 h-24 border border-white rounded-full animate-ping"
+          style={{ animationDuration: "3s" }}
+        />
+        <div
+          className="absolute bottom-36 left-1/3 w-16 h-16 border border-white animate-bounce"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute bottom-20 right-20 w-20 h-20 border border-white rotate-12 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
+      </div>
+
+      {/* Floating Dots */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Navbar */}
       <Navbar />
-      
-      <section className="h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-6 md:px-20 max-w-7xl mx-auto">
-        {/* Text Section */}
+
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative z-10 flex flex-col items-center gap-12">
+        {/* Profile Image */}
         <motion.div
-          className="flex flex-col gap-8 max-w-lg text-center md:text-left"
+          className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gradient-to-r from-blue-500 to-purple-500 shadow-xl"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <Image
+            src="/img/q.jpeg"
+            alt="Daniyal Rosli"
+            fill
+            className="rounded-full object-cover"
+            quality={90}
+            priority
+          />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-50" />
+        </motion.div>
+
+        {/* Text Content */}
+        <motion.div
+          className="flex flex-col items-center text-center space-y-6"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
         >
-          <div>
-            <motion.div 
-              className="inline-block bg-blue-600/20 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.4 }}
-            >
-              Data Scientist
-            </motion.div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold font-poppins text-white tracking-tight leading-tight">
-              Hi, I&apos;m <span className="text-blue-400">Daniyal Rosli</span>
-            </h1>
-            
-            <p className="text-lg text-gray-300 mt-4 leading-relaxed">
-              I&apos;m a student, lifelong learner, and passionate data enthusiast. Currently working as a Data Analyst Software Engineer Intern at AMD.
-            </p>
-          </div>
-          
-          {/* CTA Button */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-4"
-          >
-            <Link href="/projects">
-              <button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20">
-                View My Projects
-              </button>
-            </Link>
-          </motion.div>
-          
-          {/* Social Links */}
-          <motion.div 
-            className="flex justify-center md:justify-start gap-8 mt-6"
+          {/* Heading */}
+          <h1 className="text-4xl md:text-5xl font-bold font-poppins tracking-tight leading-tight">
+            Daniyal Rosli
+          </h1>
+
+          {/* Tagline */}
+          <span className="text-lg md:text-xl text-blue-400 font-semibold">
+            Tech Enthusiast 
+          </span>
+
+          {/* Description */}
+          <p className="text-white/80 text-base md:text-lg max-w-2xl leading-relaxed">
+            A curious student and tech enthusiast, currently shaping the future of data at AMD as a Data Analyst Software Engineer Intern.
+          </p>
+
+          {/* CTA and Social Links */}
+          <motion.div
+            className="flex flex-col items-center gap-6"
             variants={staggerChildren}
             initial="hidden"
             animate="visible"
           >
-            <motion.a
-              variants={itemAnimation}
-              href="https://www.linkedin.com/in/daniyal-rosli-4384731b0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin size={28} />
-            </motion.a>
-            <motion.a
-              variants={itemAnimation}
-              href="https://github.com/daniyalrosli"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
-              aria-label="GitHub"
-            >
-              <FaGithub size={28} />
-            </motion.a>
-            <motion.a
-              variants={itemAnimation}
-              href="mailto:daniyalrosli@gmail.com"
-              className="text-gray-400 hover:text-red-400 transition-all duration-300 transform hover:scale-110"
-              aria-label="Email"
-            >
-              <FaEnvelope size={28} />
-            </motion.a>
-          </motion.div>
-        </motion.div>
-        
-        {/* Image Section - Enhanced with refined glow effect */}
-        <motion.div
-          className="relative"
-          initial="hidden"
-          animate="visible"
-          variants={fadeInRight}
-        >
-          <div className="w-64 h-64 md:w-80 md:h-80 relative">
-            {/* Subtle glow effect */}
-            <div className="absolute inset-0 rounded-full bg-blue-400/10 blur-2xl animate-pulse opacity-50" />
+            <Link href="/projects" passHref>
+              <motion.a
+                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-10 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"
+                variants={itemAnimation}
+              >
+                Discover My Projects
+              </motion.a>
+            </Link>
+
+            <div className="flex gap-4">
             
-            {/* Image */}
-            <div className="relative w-full h-full rounded-full border-2 border-blue-400/30 p-1.5">
-              <Image
-                src="/img/q.jpeg"
-                alt="Daniyal Rosli"
-                fill
-                className="rounded-full object-cover shadow-xl"
-                quality={90}
-                priority
-              />
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </section>
     </main>

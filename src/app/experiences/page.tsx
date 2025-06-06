@@ -1,9 +1,7 @@
-// app/experience/page.tsx
 "use client";
 import Navbar from "../components/navbar";
-import { FaBriefcase, FaMapMarkerAlt, FaClock, FaLaptopCode } from "react-icons/fa";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { FaMapMarkerAlt, FaClock, FaLaptopCode } from "react-icons/fa";
 
 interface Experience {
   role: string;
@@ -16,22 +14,22 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-{
-  role: "Data Analyst Software Engineer Intern",
-  company: "Advanced Micro Devices (AMD)",
-  location: "Penang, Malaysia",
-  period: "March 2025 — Present",
-  isRemote: false,
-  logo: "/img/amd.png",
-  points: [
-    "Collected, cleaned, and analyzed large datasets to drive business decisions, identify trends, and improve processes.",
-    "Developed interactive Power BI dashboards with AI and machine learning features to deliver predictive insights to stakeholders.",
-    "Automated data workflows and reporting using SQL, Python, Power Automate, and Power Query, improving efficiency and accuracy.",
-    "Extracted, integrated, and managed data from APIs and SQL Server databases for real-time and scheduled analytics.",
-    "Collaborated with cross-functional teams to ensure data quality, maintain governance standards, and design user-friendly dashboard interfaces.",
-    "Documented data processes, analysis workflows, and dashboard functionalities to support project continuity and knowledge sharing."
-  ]
-},
+  {
+    role: "Data Analyst Software Engineer Intern",
+    company: "Advanced Micro Devices (AMD)",
+    location: "Penang, Malaysia",
+    period: "March 2025 — Present",
+    isRemote: false,
+    logo: "/img/amd.png",
+    points: [
+      "Collected, cleaned, and analyzed large datasets to drive business decisions, identify trends, and improve processes.",
+      "Developed interactive Power BI dashboards with AI and machine learning features to deliver predictive insights to stakeholders.",
+      "Automated data workflows and reporting using SQL, Python, Power Automate, and Power Query, improving efficiency and accuracy.",
+      "Extracted, integrated, and managed data from APIs and SQL Server databases for real-time and scheduled analytics.",
+      "Collaborated with cross-functional teams to ensure data quality, maintain governance standards, and design user-friendly dashboard interfaces.",
+      "Documented data processes, analysis workflows, and dashboard functionalities to support project continuity and knowledge sharing."
+    ]
+  },
   {
     role: "Member of Tech Team",
     company: "GDSC Malaysia",
@@ -43,8 +41,8 @@ const experiences: Experience[] = [
       "Responsible for frontend development for Kitahack 2024's website with other team members",
       "Utilized Angular for the front-end development",
       "Optimized web performance with other team members",
-      "Collaborated with other team members to find and fix bugs",
-    ],
+      "Collaborated with other team members to find and fix bugs"
+    ]
   },
   {
     role: "IT Intern",
@@ -58,159 +56,83 @@ const experiences: Experience[] = [
       "Collaborated within a team environment, contributing to web design projects using Elementor and WordPress",
       "Assisted in various IT tasks for Dinamiq Agency employees",
       "Designed impactful posters and visual materials, demonstrating creativity and design expertise",
-      "Enhanced website functionality and aesthetics using JavaScript, HTML, and CSS",
-    ],
-  },
+      "Enhanced website functionality and aesthetics using JavaScript, HTML, and CSS"
+    ]
+  }
 ];
 
-const ExperiencePage = () => {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-
+export default function ExperiencePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white font-sans">
-      <Navbar />
-      
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 py-20">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Experience</span>
-          </h1>
-          <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full my-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            A timeline of my professional journey and work experience
-          </p>
-        </motion.div>
-
-        {/* Timeline with connecting line */}
-        <div className="relative">
-          {/* Vertical timeline line */}
-          <div className="absolute left-0 sm:left-1/2 transform sm:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 rounded-full"></div>
-          
-          <motion.div 
-            className="space-y-16"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className={`relative flex flex-col sm:flex-row ${
-                  index % 2 === 0 ? "sm:flex-row-reverse" : ""
-                } items-center sm:items-start gap-8`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 shadow-lg z-10"></div>
-                
-                {/* Experience card */}
-                <div className="sm:w-1/2 w-full">
-                  <div className="backdrop-blur-sm bg-gray-800/40 rounded-xl shadow-xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="bg-gray-700/70 p-2 rounded-lg">
-                        <Image
-                          src={exp.logo}
-                          alt={`${exp.company} logo`}
-                          width={50}
-                          height={50}
-                          className="rounded-md"
-                        />
-                      </div>
-                      
-                      <div className="flex-1">
-                        <h2 className="text-xl font-semibold text-white tracking-tight">
-                          {exp.role}
-                        </h2>
-                        <h3 className="text-lg font-medium text-blue-300 mt-1">
-                          {exp.company}
-                        </h3>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-300 my-3">
-                      <div className="flex items-center gap-2">
-                        <FaClock className="text-purple-400" />
-                        <span>{exp.period}</span>
-                      </div>
-                      
-                      <div className="flex items-center gap-2">
-                        {exp.isRemote ? (
-                          <>
-                            <FaLaptopCode className="text-green-400" />
-                            <span>Remote</span>
-                          </>
-                        ) : (
-                          <>
-                            <FaMapMarkerAlt className="text-red-400" />
-                            <span>{exp.location}</span>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                    
-                    {exp.points && exp.points.length > 0 && (
-                      <div className="mt-4 pt-4 border-t border-gray-700/30">
-                        <h4 className="text-sm font-medium text-gray-400 mb-3 flex items-center gap-2">
-                          <FaBriefcase />
-                          <span>Responsibilities</span>
-                        </h4>
-                        <ul className="space-y-3">
-                          {exp.points.map((point, pointIndex) => (
-                            <li key={pointIndex} className="flex gap-3 group">
-                              <span className="h-5 w-5 mt-0.5 flex-shrink-0 rounded-full border border-blue-400/50 group-hover:border-blue-400 group-hover:bg-blue-900/20 flex items-center justify-center transition-colors duration-300">
-                                <span className="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
-                              </span>
-                              <span className="text-sm text-gray-300 leading-relaxed">
-                                {point}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-400 italic">
-            More experiences coming soon...
-          </p>
-        </motion.div>
+    <main className="bg-black text-white min-h-screen relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-white rotate-45 animate-pulse" />
+        <div className="absolute top-60 right-32 w-24 h-24 border border-white rounded-full animate-ping" style={{ animationDuration: '3s' }} />
+        <div className="absolute bottom-40 left-1/3 w-16 h-16 border border-white animate-bounce" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-20 right-20 w-20 h-20 border border-white rotate-12 animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
+
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <Navbar />
+
+      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-16 relative z-10 space-y-16 max-w-6xl mx-auto">
+        {/* Page Title */}
+        <div className="text-center group space-y-6">
+          <div className="inline-block p-3 rounded-full border border-white/20 hover:border-white/60 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 cursor-pointer">
+            <FaClock size={20} className="text-white transition-transform duration-300 group-hover:scale-125" />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-thin tracking-wider hover:tracking-widest transition-all duration-700 cursor-default">
+            My Experience
+          </h1>
+          <div className="w-24 h-px bg-white mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000" />
+        </div>
+
+        {/* Experience Cards */}
+        <div className="w-full grid md:grid-cols-2 gap-8">
+          {experiences.map((exp, index) => (
+            <div key={index} className="group border border-white/10 hover:border-white/30 rounded-2xl p-6 transition-all duration-500 hover:shadow-xl hover:shadow-white/5 cursor-pointer transform hover:scale-[1.01] hover:-translate-y-1">
+              <div className="flex items-center gap-4 mb-4">
+                <Image src={exp.logo} alt={exp.company} width={48} height={48} className="rounded-lg shadow-md" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">{exp.role}</h3>
+                  <p className="text-sm text-blue-400">{exp.company}</p>
+                </div>
+              </div>
+              <div className="text-sm text-white/70 mb-4 space-y-1">
+                <p className="flex items-center gap-2"><FaClock className="text-purple-400" /> {exp.period}</p>
+                <p className="flex items-center gap-2">
+                  {exp.isRemote ? (
+                    <><FaLaptopCode className="text-green-400" /> Remote</>
+                  ) : (
+                    <><FaMapMarkerAlt className="text-red-400" /> {exp.location}</>
+                  )}
+                </p>
+              </div>
+              {exp.points && (
+                <ul className="list-disc list-inside text-white/60 group-hover:text-white/90 space-y-2 text-sm transition-colors duration-300">
+                  {exp.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
-};
-
-export default ExperiencePage;
+}
