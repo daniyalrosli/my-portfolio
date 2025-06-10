@@ -10,12 +10,12 @@ const socialLinks = [
   },
   {
     icon: <FaLinkedin size={28} />,
-    url: "https://linkedin.com/in/daniyalrosli",
+    url: "https://www.linkedin.com/in/daniyal-rosli-4384731b0/",
     name: "LinkedIn",
   },
   {
     icon: <FaInstagram size={28} />,
-    url: "https://instagram.com/daniyalrosli",
+    url: "https://www.instagram.com/daniyalrsli_/",
     name: "Instagram",
   },
 ];
