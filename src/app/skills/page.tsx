@@ -18,14 +18,7 @@ export default function SkillsPage() {
     }
   ];
 
-  const proficiencies = [
-    { name: "Python", level: 90 },
-    { name: "Data Analysis", level: 85 },
-    { name: "Machine Learning", level: 80 },
-    { name: "SQL", level: 85 },
-    { name: "Web Development", level: 75 },
-    { name: "Cloud Services", level: 70 }
-  ];
+ 
 
   return (
     <main className="bg-black text-white min-h-screen relative overflow-hidden">
@@ -80,26 +73,7 @@ export default function SkillsPage() {
           ))}
         </div>
 
-        {/* Proficiency Section */}
-        <div className="w-full border border-white/10 hover:border-white/30 rounded-2xl p-8 transition-all duration-500 hover:shadow-xl hover:shadow-white/5">
-          <h2 className="text-xl font-thin tracking-wide mb-6 text-center">Technical Proficiency</h2>
-          <div className="space-y-4">
-            {proficiencies.map((item, idx) => (
-              <div key={idx}>
-                <div className="flex justify-between text-sm text-white/70 mb-1">
-                  <span>{item.name}</span>
-                  <span>{item.level}%</span>
-                </div>
-                <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-full transition-all duration-1000"
-                    style={{ width: `${item.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+       
       </section>
     </main>
   );
