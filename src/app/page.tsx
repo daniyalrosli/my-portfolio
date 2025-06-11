@@ -13,7 +13,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-// Animation variants
+// Animation Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -24,48 +24,42 @@ const fadeInUp = {
 };
 
 const staggerChildren = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const itemAnimation = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 export default function HomePage() {
   return (
     <main
-      className={`bg-black text-white min-h-screen ${inter.variable} ${poppins.variable} font-inter relative overflow-hidden`}
+      className={`relative bg-black text-white min-h-screen ${inter.variable} ${poppins.variable} font-inter overflow-hidden`}
     >
-      {/* Background Geometric Patterns */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
-        <div className="absolute top-24 left-20 w-32 h-32 border border-white rotate-45 animate-pulse" />
-        <div
-          className="absolute top-60 right-28 w-24 h-24 border border-white rounded-full animate-ping"
-          style={{ animationDuration: "3s" }}
-        />
-        <div
-          className="absolute bottom-36 left-1/3 w-16 h-16 border border-white animate-bounce"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute bottom-20 right-20 w-20 h-20 border border-white rotate-12 animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
+      {/* Layered Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-60 z-0" />
 
-      {/* Floating Dots */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(15)].map((_, i) => (
+      {/* Floating Dots / Particles */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {[...Array(25)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+            className="absolute w-1.5 h-1.5 bg-white rounded-full blur-sm opacity-10 animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${2 + Math.random() * 3}s`,
             }}
           />
         ))}
@@ -75,67 +69,66 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative z-10 flex flex-col items-center gap-12">
+      <section className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-36 flex flex-col items-center gap-14 text-center">
         {/* Profile Image */}
         <motion.div
-          className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gradient-to-r from-blue-500 to-purple-500 shadow-xl"
-          initial={{ opacity: 0, scale: 0.9 }}
+          className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-gradient-to-r from-blue-500 to-purple-500 shadow-2xl overflow-hidden group"
+          initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
             src="/img/q.jpeg"
             alt="Daniyal Rosli"
             fill
-            className="rounded-full object-cover"
-            quality={90}
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            quality={100}
             priority
           />
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-50" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/40 to-purple-500/40 opacity-30" />
         </motion.div>
 
         {/* Text Content */}
         <motion.div
-          className="flex flex-col items-center text-center space-y-6"
+          className="space-y-6 max-w-2xl"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
         >
-          {/* Heading */}
-          <h1 className="text-4xl md:text-5xl font-bold font-poppins tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold font-poppins leading-tight">
             Daniyal Rosli
           </h1>
 
-          {/* Tagline */}
-          <span className="text-lg md:text-xl text-blue-400 font-semibold">
-            Tech Enthusiast 
-          </span>
-
-          {/* Description */}
-          <p className="text-white/80 text-base md:text-lg max-w-2xl leading-relaxed">
-            A curious student and tech enthusiast, currently shaping the future of data at AMD as a Data Analyst Software Engineer Intern.
+          <p className="text-base md:text-lg text-white/70 font-inter">
+            Turning curiosity into code — crafting data-driven solutions at AMD.
           </p>
 
-          {/* CTA and Social Links */}
-          <motion.div
-            className="flex flex-col items-center gap-6"
-            variants={staggerChildren}
-            initial="hidden"
-            animate="visible"
-          >
-            <Link href="/projects" passHref>
-              <motion.a
-                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-10 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"
-                variants={itemAnimation}
-              >
-                Discover My Projects
-              </motion.a>
-            </Link>
+          <span className="text-lg md:text-xl text-blue-400 font-semibold tracking-wide">
+            Tech Enthusiast & Data Analyst Intern
+          </span>
 
-            <div className="flex gap-4">
-            
-            </div>
-          </motion.div>
+          <p className="text-sm md:text-lg text-white/80 leading-relaxed">
+            A passionate student and tech explorer dedicated to transforming ideas
+            into impactful digital experiences. Currently interning at AMD as a
+            Data Analyst Software Engineer, building tools that empower decisions.
+          </p>
+        </motion.div>
+
+        {/* CTA Button */}
+        <motion.div
+          className="flex justify-center mt-4"
+          variants={staggerChildren}
+          initial="hidden"
+          animate="visible"
+        >
+          <Link href="/projects" passHref>
+            <motion.a
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all duration-300"
+              variants={itemAnimation}
+            >
+              🚀 Discover My Projects
+            </motion.a>
+          </Link>
         </motion.div>
       </section>
     </main>
