@@ -63,7 +63,7 @@ export default function ContactPage() {
             />
           </div>
           <h1 className="text-3xl md:text-4xl font-thin tracking-wider hover:tracking-widest transition-all duration-700 cursor-default">
-            Contact Me
+            contact me
           </h1>
           <div className="w-24 h-px bg-white mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000" />
         </div>

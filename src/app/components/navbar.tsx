@@ -24,12 +24,12 @@ export default function Navbar() {
 
         {/* Links */}
         <ul className={`md:flex md:space-x-8 space-y-6 md:space-y-0 absolute md:static left-0 right-0 bg-black bg-opacity-90 p-4 md:p-0 md:bg-transparent md:flex-row flex-col items-center transition-all duration-300 ease-in-out ${isOpen ? 'top-16' : '-top-96'}`}>
-          <li><Link href="/" className="text-white hover:text-gray-300">Home</Link></li>
-          <li><Link href="/about" className="text-white hover:text-gray-300">About</Link></li>
-          <li><Link href="/skills" className="text-white hover:text-gray-300">Skills</Link></li>
-          <li><Link href="/experiences" className="text-white hover:text-gray-300">Experiences</Link></li>
-          <li><Link href="/projects" className="text-white hover:text-gray-300">Projects</Link></li>
-          <li><Link href="/contact" className="text-white hover:text-gray-300">Contacts</Link></li>
+          <li><Link href="/" className="text-white hover:text-gray-300">home</Link></li>
+          <li><Link href="/about" className="text-white hover:text-gray-300">about</Link></li>
+          <li><Link href="/skills" className="text-white hover:text-gray-300">skills</Link></li>
+          <li><Link href="/experiences" className="text-white hover:text-gray-300">experiences</Link></li>
+          <li><Link href="/projects" className="text-white hover:text-gray-300">projects</Link></li>
+          <li><Link href="/contact" className="text-white hover:text-gray-300">contacts</Link></li>
 
         </ul>
       </div>

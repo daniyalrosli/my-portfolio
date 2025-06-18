@@ -1,116 +1,145 @@
 "use client";
 import Navbar from "../components/navbar";
-import { HiOutlineChevronDoubleRight } from "react-icons/hi";
+import { motion } from "framer-motion";
+import {
+  FaCode,
+  FaServer,
+  FaChartLine,
+  FaTools,
+  FaChevronRight,
+} from "react-icons/fa"; // Import icons
+
+// animation variants for smooth fade-in
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 export default function SkillsPage() {
-  return (
-    <main className="bg-black text-white min-h-screen relative overflow-hidden font-sans">
-      {/* Background Shapes */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-white rotate-45 animate-pulse" />
-        <div className="absolute top-60 right-32 w-24 h-24 border border-white rounded-full animate-ping" style={{ animationDuration: "3s" }} />
-        <div className="absolute bottom-40 left-1/3 w-16 h-16 border border-white animate-bounce" style={{ animationDelay: "1s" }} />
-        <div className="absolute bottom-20 right-20 w-20 h-20 border border-white rotate-12 animate-pulse" style={{ animationDelay: "2s" }} />
-      </div>
+  const skillCategories = [
+    {
+      title: "frontend",
+      icon: <FaCode className="text-blue-400" />,
+      items: [
+        "html, css, javascript",
+        "react, next.js",
+        "tailwind css",
+        "figma, ui design",
+      ],
+    },
+    {
+      title: "backend",
+      icon: <FaServer className="text-green-400" />,
+      items: [
+        "python, flask, fastapi",
+        "sql, postgresql",
+        "mongodb, redis",
+        "rest & graphql",
+      ],
+    },
+    {
+      title: "data science",
+      icon: <FaChartLine className="text-purple-400" />,
+      items: [
+        "pandas, numpy",
+        "scikit-learn, tensorflow",
+        "matplotlib, seaborn",
+        "jupyter, colab",
+      ],
+    },
+    {
+      title: "devops & tools",
+      icon: <FaTools className="text-yellow-400" />,
+      items: [
+        "git, github",
+        "docker, ci/cd",
+        "aws, vercel",
+        "postman, vs code",
+      ],
+    },
+  ];
 
-      {/* Floating Dots */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
+  return (
+    <main className="bg-black text-white min-h-screen font-sans lowercase antialiased overflow-hidden relative">
+      {/* Removed background radial gradient and animations */}
+      {/* Removed <style jsx> block */}
 
       <Navbar />
 
-      {/* Content Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative z-10 max-w-7xl mx-auto space-y-20">
-        {/* Page Title */}
-        <header className="text-center space-y-6 group cursor-default">
-          <div className="inline-flex items-center justify-center w-14 h-14 border border-white/20 rounded-full transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
-            <HiOutlineChevronDoubleRight className="text-white text-xl group-hover:scale-125 transition-transform duration-300" />
-          </div>
-          <h1 className="text-5xl font-light tracking-wider transition-all duration-700 group-hover:tracking-widest">
-            My Skills
+      <section className="relative z-10 min-h-screen flex flex-col items-center px-4 sm:px-6 py-12 md:py-20 max-w-6xl mx-auto space-y-12">
+        {/* header */}
+        <motion.header
+          className="text-center space-y-4 pt-10"
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h1 className="text-4xl md:text-6xl font-extralight tracking-tighter text-white drop-shadow-none">
+            {/* Removed drop-shadow */}
+            my skills
           </h1>
-          <div className="w-24 h-[2px] bg-gradient-to-r from-white/30 to-white/70 mx-auto group-hover:w-32 transition-all duration-700" />
-        </header>
+          <p className="text-base text-gray-300 max-w-md mx-auto font-light leading-relaxed">
+            the powerful tools and technologies I wield to{" "}
+            <span className="font-medium text-blue-300">
+              bring ideas to life
+            </span>{" "}
+            and solve complex challenges.
+          </p>
+          <div className="w-20 h-1 bg-gray-600 mx-auto rounded-full mt-6" />{" "}
+          {/* Solid color divider */}
+        </motion.header>
 
-        {/* Tech Stack Section */}
-        <div className="w-full space-y-12">
-          <h2 className="text-3xl font-thin tracking-wider text-center">
-            tech stack that uses in my projects
-          </h2>
+        {/* tech stack */}
+        <motion.div
+          className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {skillCategories.map((section, index) => (
+            <motion.div
+              key={index}
+              className="group relative p-7 bg-gray-950/20 border border-gray-800/30 rounded-2xl backdrop-blur-md transition-all duration-500 hover:bg-gray-900/30 hover:border-blue-700/50 hover:shadow-2xl hover:shadow-blue-900/20 transform hover:-translate-y-1"
+              variants={itemVariants}
+            >
+              {/* Removed optional background glow on hover */}
+              {/* <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-900/40 to-purple-900/40 pointer-events-none" /> */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Frontend",
-                items: [
-                  "HTML, CSS, JavaScript",
-                  "React.js, Next.js",
-                  "Tailwind CSS",
-                  "Figma (UI/UX Design)",
-                ],
-              },
-              {
-                title: "Backend",
-                items: [
-                  "Python (Flask, FastAPI)",
-                  "SQL (MySQL, PostgreSQL)",
-                  "MongoDB",
-                  "RESTful APIs",
-                ],
-              },
-              {
-                title: "Data & ML",
-                items: [
-                  "Python (Pandas, NumPy, Scikit-learn)",
-                  "Data Analysis & Visualization",
-                  "Machine Learning",
-                  "Jupyter Notebook",
-                ],
-              },
-              {
-                title: "Tools",
-                items: ["Git & GitHub", "Postman", "Docker (Basics)", "Power BI"],
-              },
-              {
-                title: "Cloud & Infra",
-                items: [
-                  "AWS (Lambda, S3, EC2 - Basic)",
-                  "Cloud Computing Concepts",
-                  "CI/CD Concepts",
-                ],
-              },
-            ].map((section, index) => (
-              <div
-                key={index}
-                className="group border border-white/10 bg-white/5 backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-white/10 transition-all duration-300 hover:scale-[1.02]"
-              >
-                <h3 className="text-xl font-light mb-4 text-white/90 group-hover:tracking-wide transition-all">
+              <div className="relative z-10 flex items-center mb-4 text-white">
+                <span className="text-3xl mr-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                  {section.icon}
+                </span>
+                <h3 className="text-xl font-medium tracking-wide group-hover:text-white transition-colors duration-300">
                   {section.title}
                 </h3>
-                <ul className="list-disc list-inside space-y-2 text-white/70">
-                  {section.items.map((item, i) => (
-                    <li key={i} className="hover:text-white transition-colors duration-200">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
-            ))}
-          </div>
-        </div>
+              <ul className="space-y-2 text-gray-300 relative z-10">
+                {section.items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center text-sm font-light group-hover:text-gray-100 transition-colors duration-200"
+                  >
+                    <FaChevronRight className="text-xs mr-2 text-blue-500 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />{" "}
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
+
+      {/* Removed simple keyframe animation for background elements */}
     </main>
   );
 }
