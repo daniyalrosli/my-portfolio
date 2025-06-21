@@ -60,16 +60,16 @@ export default function AboutPage() {
         >
           <h2 className="flex items-center gap-2 text-xl font-light text-gray-200 mb-4">
             <FaBriefcase className="text-gray-400 text-lg" />
-            <span>my journey</span>
+            <span>about myself</span>
           </h2>
           <p className="text-gray-300 leading-relaxed text-base mb-4">
-            i&apos;m <span className="text-white font-medium">daniyal rosli</span>, a final-year{" "}
+            i&apos;m <span className="text-white font-medium">daniyal rosli</span>, a first class {" "}
             <span className="text-white font-medium">intelligent systems engineering</span>{" "}
-            student passionate about transforming complex data into meaningful insights.
+            graduate from uitm passionate about transforming complex data into meaningful insights.
           </p>
           <p className="text-gray-300 leading-relaxed text-base">
             currently interning at <span className="text-white font-medium">amd</span>,
-            i build tools that empower data-driven decisions.
+            i build tools that empower data-driven decisions. always up for learning something new, working with awesome teams, and writing on the side just for fun.
           </p>
         </motion.article>
 

@@ -107,6 +107,29 @@ const projects = [
     link: "https://github.com/daniyalrosli/BookLens",
     category: "recommendation system",
   },
+
+  {
+    title: "moodbite",
+    subtitle: "ai-powered food mood matcher",
+    description:
+      "an ai-driven app that suggests food based on your mood — still a work in progress!",
+    techStack: ["next.js", "openai api", "tailwind css", "python"],
+    link: "https://github.com/daniyalrosli/moodbite", // replace if different
+    category: "ai project",
+  },
+
+  {
+    title: "reviewsense",
+    subtitle: "amazon review insights explorer",
+    description:
+      "a data visualization tool that helps uncover trends and insights from amazon product reviews using interactive dashboards.",
+    techStack: ["python", "pandas", "streamlit", "matplotlib", "seaborn", "altair"],
+    link: "https://github.com/daniyalrosli/reviewsense",
+    category: "data visualization",
+  },
+
+
+
 ];
 
 export default function ProjectsPage() {

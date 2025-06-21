@@ -63,7 +63,7 @@ export default function HomePage() {
             className="text-lg md:text-xl text-gray-300 font-inter leading-relaxed px-4"
             variants={itemVariants}
           >
-            turning curiosity into code 
+            my curiosity is my biggest strength 
           </motion.p>
 
           <motion.span
