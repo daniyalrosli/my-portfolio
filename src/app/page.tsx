@@ -41,7 +41,7 @@ const itemVariants = {
 export default function HomePage() {
   return (
     <main
-      className={`relative bg-black text-white min-h-screen flex flex-col ${inter.variable} ${poppins.variable} font-inter antialiased`}
+      className={`relative bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen flex flex-col ${inter.variable} ${poppins.variable} font-inter antialiased`}
     >
       <Navbar />
 
@@ -53,28 +53,28 @@ export default function HomePage() {
           variants={containerVariants}
         >
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins leading-tight text-white tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins leading-tight text-gray-900 dark:text-white tracking-tight"
             variants={itemVariants}
           >
             daniyal rosli
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-300 font-inter leading-relaxed px-4"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-inter leading-relaxed px-4"
             variants={itemVariants}
           >
             my curiosity is my biggest strength 
           </motion.p>
 
           <motion.span
-            className="block text-xl md:text-2xl text-white/70 font-medium pt-2"
+            className="block text-xl md:text-2xl text-gray-700 dark:text-white/70 font-medium pt-2"
             variants={itemVariants}
           >
             tech enthusiast & forever learner
           </motion.span>
 
           <motion.p
-            className="text-md md:text-lg text-gray-400 leading-relaxed pt-3 px-4"
+            className="text-md md:text-lg text-gray-500 dark:text-gray-400 leading-relaxed pt-3 px-4"
             variants={itemVariants}
           >
             a passionate student and tech explorer dedicated to transforming
@@ -91,7 +91,7 @@ export default function HomePage() {
           >
             <Link href="/projects" passHref>
               <motion.a
-                className="inline-block border border-white px-8 py-3 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300"
+                className="inline-block border border-gray-900 dark:border-white px-8 py-3 rounded-full text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

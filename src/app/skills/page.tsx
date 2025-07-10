@@ -70,7 +70,7 @@ export default function SkillsPage() {
   ];
 
   return (
-    <main className="bg-black text-white min-h-screen font-sans lowercase antialiased overflow-hidden relative">
+    <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans lowercase antialiased overflow-hidden relative">
       {/* Removed background radial gradient and animations */}
       {/* Removed <style jsx> block */}
 
@@ -84,18 +84,18 @@ export default function SkillsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-6xl font-extralight tracking-tighter text-white drop-shadow-none">
+          <h1 className="text-4xl md:text-6xl font-extralight tracking-tighter text-gray-900 dark:text-white drop-shadow-none">
             {/* Removed drop-shadow */}
             my skills
           </h1>
-          <p className="text-base text-gray-300 max-w-md mx-auto font-light leading-relaxed">
+          <p className="text-base text-gray-600 dark:text-gray-300 max-w-md mx-auto font-light leading-relaxed">
             the powerful tools and technologies I wield to{" "}
-            <span className="font-medium text-blue-300">
+            <span className="font-medium text-blue-600 dark:text-blue-300">
               bring ideas to life
             </span>{" "}
             and solve complex challenges.
           </p>
-          <div className="w-20 h-1 bg-gray-600 mx-auto rounded-full mt-6" />{" "}
+          <div className="w-20 h-1 bg-gray-400 dark:bg-gray-600 mx-auto rounded-full mt-6" />{" "}
           {/* Solid color divider */}
         </motion.header>
 
@@ -109,27 +109,27 @@ export default function SkillsPage() {
           {skillCategories.map((section, index) => (
             <motion.div
               key={index}
-              className="group relative p-7 bg-gray-950/20 border border-gray-800/30 rounded-2xl backdrop-blur-md transition-all duration-500 hover:bg-gray-900/30 hover:border-blue-700/50 hover:shadow-2xl hover:shadow-blue-900/20 transform hover:-translate-y-1"
+              className="group relative p-7 bg-gray-50/50 dark:bg-gray-950/20 border border-gray-200/30 dark:border-gray-800/30 rounded-2xl backdrop-blur-md transition-all duration-500 hover:bg-gray-100/50 dark:hover:bg-gray-900/30 hover:border-blue-500/50 dark:hover:border-blue-700/50 hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-blue-900/20 transform hover:-translate-y-1"
               variants={itemVariants}
             >
               {/* Removed optional background glow on hover */}
               {/* <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-900/40 to-purple-900/40 pointer-events-none" /> */}
 
-              <div className="relative z-10 flex items-center mb-4 text-white">
+              <div className="relative z-10 flex items-center mb-4 text-gray-900 dark:text-white">
                 <span className="text-3xl mr-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                   {section.icon}
                 </span>
-                <h3 className="text-xl font-medium tracking-wide group-hover:text-white transition-colors duration-300">
+                <h3 className="text-xl font-medium tracking-wide group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
                   {section.title}
                 </h3>
               </div>
-              <ul className="space-y-2 text-gray-300 relative z-10">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300 relative z-10">
                 {section.items.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center text-sm font-light group-hover:text-gray-100 transition-colors duration-200"
+                    className="flex items-center text-sm font-light group-hover:text-gray-700 dark:group-hover:text-gray-100 transition-colors duration-200"
                   >
-                    <FaChevronRight className="text-xs mr-2 text-blue-500 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />{" "}
+                    <FaChevronRight className="text-xs mr-2 text-blue-500 dark:text-blue-500 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />{" "}
                     {item}
                   </li>
                 ))}

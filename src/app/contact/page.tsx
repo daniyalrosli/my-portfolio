@@ -22,26 +22,26 @@ const socialLinks = [
 
 export default function ContactPage() {
   return (
-    <main className="bg-black text-white min-h-screen relative overflow-hidden">
+    <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen relative overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-white rotate-45 animate-pulse" />
+        <div className="absolute top-20 left-20 w-32 h-32 border border-gray-900 dark:border-white rotate-45 animate-pulse" />
         <div
-          className="absolute top-60 right-32 w-24 h-24 border border-white rounded-full animate-ping"
+          className="absolute top-60 right-32 w-24 h-24 border border-gray-900 dark:border-white rounded-full animate-ping"
           style={{ animationDuration: "3s" }}
         />
         <div
-          className="absolute bottom-40 left-1/3 w-16 h-16 border border-white animate-bounce"
+          className="absolute bottom-40 left-1/3 w-16 h-16 border border-gray-900 dark:border-white animate-bounce"
           style={{ animationDelay: "1s" }}
         />
         <div
-          className="absolute bottom-20 right-20 w-20 h-20 border border-white rotate-12 animate-pulse"
+          className="absolute bottom-20 right-20 w-20 h-20 border border-gray-900 dark:border-white rotate-12 animate-pulse"
           style={{ animationDelay: "2s" }}
         />
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+            className="absolute w-1 h-1 bg-gray-900 dark:bg-white rounded-full opacity-20 animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -56,16 +56,16 @@ export default function ContactPage() {
 
       <section className="min-h-screen flex flex-col items-center justify-center px-8 py-16 relative z-10 max-w-4xl mx-auto space-y-12">
         <div className="text-center group space-y-6">
-          <div className="inline-block p-3 rounded-full border border-white/20 hover:border-white/60 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 cursor-pointer">
+          <div className="inline-block p-3 rounded-full border border-gray-300 dark:border-white/20 hover:border-gray-500 dark:hover:border-white/60 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 cursor-pointer">
             <FaEnvelope
               size={20}
-              className="text-white transition-transform duration-300 group-hover:scale-125"
+              className="text-gray-900 dark:text-white transition-transform duration-300 group-hover:scale-125"
             />
           </div>
-          <h1 className="text-3xl md:text-4xl font-thin tracking-wider hover:tracking-widest transition-all duration-700 cursor-default">
+          <h1 className="text-3xl md:text-4xl font-thin tracking-wider hover:tracking-widest transition-all duration-700 cursor-default text-gray-900 dark:text-white">
             contact me
           </h1>
-          <div className="w-24 h-px bg-white mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000" />
+          <div className="w-24 h-px bg-gray-900 dark:bg-white mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000" />
         </div>
 
         {/* Social Media Icons */}
@@ -77,7 +77,7 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={name}
-              className="text-white/80 hover:text-white transition-colors duration-300"
+              className="text-gray-600 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
             >
               {icon}
             </a>

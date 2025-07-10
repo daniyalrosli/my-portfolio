@@ -72,23 +72,23 @@ export default function ExperiencePage() {
         />
       </Head>
       <main
-        className="bg-black text-white min-h-screen relative overflow-hidden"
+        className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen relative overflow-hidden"
         style={{ fontFamily: "'inter', sans-serif" }}
       >
         <Navbar />
         <section className="min-h-screen flex flex-col items-center px-4 py-28 max-w-2xl mx-auto space-y-16">
           <div className="text-center space-y-4 animate-fade-in">
-            <h1 className="text-3xl font-medium tracking-widest">my journey</h1>
-            <div className="w-12 h-[1px] bg-white/20 mx-auto" />
+            <h1 className="text-3xl font-medium tracking-widest text-gray-900 dark:text-white">my journey</h1>
+            <div className="w-12 h-[1px] bg-gray-300 dark:bg-white/20 mx-auto" />
           </div>
           <div className="relative w-full">
-            <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-white/10" />
+            <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-gray-200 dark:bg-white/10" />
             {experiences.map((exp, index) => (
               <div
                 key={index}
                 className="relative mb-16 group hover:scale-[1.02] transition-transform duration-300 ease-in-out"
               >
-                <div className="absolute left-10 top-3 w-3 h-3 bg-white/40 rounded-full" />
+                <div className="absolute left-10 top-3 w-3 h-3 bg-gray-400 dark:bg-white/40 rounded-full" />
                 <div className="ml-20">
                   <div className="flex items-center gap-4 mb-3">
                     <Image
@@ -99,34 +99,34 @@ export default function ExperiencePage() {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-base font-medium text-white">{exp.role}</h3>
-                      <p className="text-sm text-white/70">{exp.company}</p>
+                      <h3 className="text-base font-medium text-gray-900 dark:text-white">{exp.role}</h3>
+                      <p className="text-sm text-gray-600 dark:text-white/70">{exp.company}</p>
                     </div>
                   </div>
-                  <div className="text-sm text-white/70 space-y-2 mb-4">
+                  <div className="text-sm text-gray-600 dark:text-white/70 space-y-2 mb-4">
                     <div className="flex items-center gap-2">
-                      <FaClock className="text-white/50" size={12} />
+                      <FaClock className="text-gray-500 dark:text-white/50" size={12} />
                       <span>{exp.period}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       {exp.isRemote ? (
                         <>
-                          <FaLaptopCode className="text-white/50" size={12} />
+                          <FaLaptopCode className="text-gray-500 dark:text-white/50" size={12} />
                           <span>remote</span>
                         </>
                       ) : (
                         <>
-                          <FaMapMarkerAlt className="text-white/50" size={12} />
+                          <FaMapMarkerAlt className="text-gray-500 dark:text-white/50" size={12} />
                           <span>{exp.location}</span>
                         </>
                       )}
                     </div>
                   </div>
                   {exp.points && (
-                    <ul className="list-none text-white/70 text-sm space-y-3">
+                    <ul className="list-none text-gray-600 dark:text-white/70 text-sm space-y-3">
                       {exp.points.map((point, i) => (
                         <li key={i} className="leading-relaxed flex gap-3">
-                          <span className="text-white/40">•</span>
+                          <span className="text-gray-400 dark:text-white/40">•</span>
                           <span>{point}</span>
                         </li>
                       ))}

@@ -31,7 +31,7 @@ export default function AboutPage() {
 
   return (
     <main
-      className={`bg-black text-white min-h-screen ${inter.className} flex flex-col antialiased lowercase`}
+      className={`bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen ${inter.className} flex flex-col antialiased lowercase`}
     >
       <Navbar />
 
@@ -47,46 +47,46 @@ export default function AboutPage() {
       >
         {/* header */}
         <motion.header className="text-center mb-12" variants={fadeIn}>
-          <h1 className="text-4xl md:text-5xl font-light text-white tracking-wide mb-4">
+          <h1 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white tracking-wide mb-4">
             about me
           </h1>
-          <div className="w-16 h-0.5 bg-gray-500 mx-auto rounded-full" />
+          <div className="w-16 h-0.5 bg-gray-400 dark:bg-gray-500 mx-auto rounded-full" />
         </motion.header>
 
         {/* professional journey */}
         <motion.article
-          className="mb-10 p-6 bg-gray-950/20 border border-gray-800/20 rounded-xl backdrop-blur-sm transition-transform duration-300 hover:-translate-y-0.5"
+          className="mb-10 p-6 bg-gray-50/50 dark:bg-gray-950/20 border border-gray-200/20 dark:border-gray-800/20 rounded-xl backdrop-blur-sm transition-transform duration-300 hover:-translate-y-0.5"
           variants={fadeIn}
         >
-          <h2 className="flex items-center gap-2 text-xl font-light text-gray-200 mb-4">
-            <FaBriefcase className="text-gray-400 text-lg" />
+          <h2 className="flex items-center gap-2 text-xl font-light text-gray-700 dark:text-gray-200 mb-4">
+            <FaBriefcase className="text-gray-500 dark:text-gray-400 text-lg" />
             <span>about myself</span>
           </h2>
-          <p className="text-gray-300 leading-relaxed text-base mb-4">
-            i&apos;m <span className="text-white font-medium">daniyal rosli</span>, a first class {" "}
-            <span className="text-white font-medium">intelligent systems engineering</span>{" "}
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base mb-4">
+            i&apos;m <span className="text-gray-900 dark:text-white font-medium">daniyal rosli</span>, a first class {" "}
+            <span className="text-gray-900 dark:text-white font-medium">intelligent systems engineering</span>{" "}
             graduate from uitm passionate about transforming complex data into meaningful insights.
           </p>
-          <p className="text-gray-300 leading-relaxed text-base">
-            currently interning at <span className="text-white font-medium">amd</span>,
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
+            currently interning at <span className="text-gray-900 dark:text-white font-medium">amd</span>,
             i build tools that empower data-driven decisions. always up for learning something new, working with awesome teams, and writing on the side just for fun.
           </p>
         </motion.article>
 
         {/* core skills */}
         <motion.article
-          className="mb-10 p-6 bg-gray-950/20 border border-gray-800/20 rounded-xl backdrop-blur-sm transition-transform duration-300 hover:-translate-y-0.5"
+          className="mb-10 p-6 bg-gray-50/50 dark:bg-gray-950/20 border border-gray-200/20 dark:border-gray-800/20 rounded-xl backdrop-blur-sm transition-transform duration-300 hover:-translate-y-0.5"
           variants={fadeIn}
         >
-          <h2 className="flex items-center gap-2 text-xl font-light text-gray-200 mb-4">
-            <FaCode className="text-gray-400 text-lg" />
+          <h2 className="flex items-center gap-2 text-xl font-light text-gray-700 dark:text-gray-200 mb-4">
+            <FaCode className="text-gray-500 dark:text-gray-400 text-lg" />
             <span>core skills</span>
           </h2>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill}
-                className="text-gray-200 bg-gray-900/30 border border-gray-700/30 rounded-full py-1.5 px-4 text-sm font-light tracking-wide transition-colors duration-200 hover:bg-gray-800/50"
+                className="text-gray-700 dark:text-gray-200 bg-gray-100/50 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-700/30 rounded-full py-1.5 px-4 text-sm font-light tracking-wide transition-colors duration-200 hover:bg-gray-200/50 dark:hover:bg-gray-800/50"
                 variants={fadeIn}
                 custom={index + 1}
               >
@@ -110,8 +110,8 @@ export default function AboutPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full
-              bg-gray-800 text-white text-base font-medium
-              hover:bg-gray-700 transition-all duration-200
+              bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white text-base font-medium
+              hover:bg-gray-300 dark:hover:bg-gray-700 transition-all duration-200
               focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
           >
             <FaFileDownload className="text-lg" />

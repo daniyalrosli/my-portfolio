@@ -135,7 +135,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <motion.main
-      className="bg-black text-white min-h-screen font-sans"
+      className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans"
       initial="hidden"
       animate="visible"
       variants={{
@@ -152,8 +152,8 @@ export default function ProjectsPage() {
         variants={fadeIn}
         custom={0}
       >
-        <h1 className="text-4xl font-semibold tracking-wide">projects</h1>
-        <p className="text-white/60 text-sm max-w-xl mx-auto leading-relaxed">
+        <h1 className="text-4xl font-semibold tracking-wide text-gray-900 dark:text-white">projects</h1>
+        <p className="text-gray-600 dark:text-white/60 text-sm max-w-xl mx-auto leading-relaxed">
           A curated collection of my work in data science, machine learning, and full-stack development.
         </p>
       </motion.section>
@@ -168,17 +168,17 @@ export default function ProjectsPage() {
             rel="noopener noreferrer"
             variants={fadeIn}
             custom={index + 1}
-            className="bg-[#121212] p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:bg-[#1b1b1b]"
+            className="bg-gray-50 dark:bg-[#121212] p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-[#1b1b1b]"
           >
             <div className="flex justify-between items-start flex-wrap gap-y-2">
               <div>
-                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                <p className="text-sm text-white/50">{project.category}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
+                <p className="text-sm text-gray-500 dark:text-white/50">{project.category}</p>
               </div>
-              <span className="text-sm text-white/40 text-right">{project.subtitle}</span>
+              <span className="text-sm text-gray-400 dark:text-white/40 text-right">{project.subtitle}</span>
             </div>
 
-            <p className="text-white/70 text-sm mt-3 leading-relaxed">
+            <p className="text-gray-600 dark:text-white/70 text-sm mt-3 leading-relaxed">
               {project.description}
             </p>
 
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
               {project.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="text-xs bg-white/10 px-3 py-1 rounded-full text-white/80"
+                  className="text-xs bg-gray-200/50 dark:bg-white/10 px-3 py-1 rounded-full text-gray-700 dark:text-white/80"
                 >
                   {tech}
                 </span>
