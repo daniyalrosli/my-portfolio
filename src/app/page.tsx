@@ -1,5 +1,6 @@
 "use client";
 import Navbar from "./components/navbar";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Inter, Poppins } from "next/font/google";
 import Link from "next/link";
@@ -52,6 +53,16 @@ export default function HomePage() {
           animate="visible"
           variants={containerVariants}
         >
+          <motion.div className="flex justify-center">
+            <Image
+              src="/img/ju.jpeg"
+              alt="Daniyal Rosli"
+              width={160}
+              height={160}
+              className="rounded-full shadow-lg border-4 border-white dark:border-gray-800 object-cover"
+              priority
+            />
+          </motion.div>
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins leading-tight text-gray-900 dark:text-white tracking-tight"
             variants={itemVariants}
@@ -95,7 +106,7 @@ export default function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                discover my projects
+                check out my projects
               </motion.a>
             </Link>
           </motion.div>
