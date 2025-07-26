@@ -55,7 +55,7 @@ export default function HomePage() {
         >
           <motion.div className="flex justify-center">
             <Image
-              src="/img/ju.jpeg"
+              src="/img/me.png"
               alt="Daniyal Rosli"
               width={160}
               height={160}
