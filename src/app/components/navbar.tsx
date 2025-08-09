@@ -8,19 +8,20 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-lg shadow-md z-50">
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
+    <nav className="fixed top-0 left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-lg shadow-md z-50">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-4">
         {/* Logo or Brand Name - No longer a link */}
-        <div className="text-gray-900 dark:text-white text-2xl font-bold">
- 
-        </div>
+        <div className="text-gray-900 dark:text-white text-lg md:text-2xl font-bold">
+        
+       </div>
 
         {/* Hamburger for Mobile */}
         <button
-          className="text-gray-900 dark:text-white md:hidden"
+          className="text-gray-900 dark:text-white md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          ☰
+          {isOpen ? '×' : '☰'}
         </button>
 
         {/* Links and Theme Toggle */}

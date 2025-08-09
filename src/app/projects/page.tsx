@@ -148,18 +148,18 @@ export default function ProjectsPage() {
 
       {/* Header */}
       <motion.section
-        className="text-center py-16 space-y-3"
+        className="text-center pt-24 pb-12 md:py-16 space-y-3 px-4"
         variants={fadeIn}
         custom={0}
       >
-        <h1 className="text-4xl font-semibold tracking-wide text-gray-900 dark:text-white">projects</h1>
-        <p className="text-gray-600 dark:text-white/60 text-sm max-w-xl mx-auto leading-relaxed">
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-wide text-gray-900 dark:text-white">projects</h1>
+        <p className="text-gray-600 dark:text-white/60 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
           A curated collection of my work in data science, machine learning, and full-stack development.
         </p>
       </motion.section>
 
       {/* Projects Grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-12 pb-20">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4 sm:px-8 lg:px-12 pb-16 md:pb-20">
         {projects.map((project, index) => (
           <motion.a
             key={index}
@@ -168,7 +168,7 @@ export default function ProjectsPage() {
             rel="noopener noreferrer"
             variants={fadeIn}
             custom={index + 1}
-            className="bg-gray-50 dark:bg-[#121212] p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-[#1b1b1b]"
+            className="bg-gray-50 dark:bg-[#121212] p-4 md:p-6 rounded-xl md:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-[#1b1b1b]"
           >
             <div className="flex justify-between items-start flex-wrap gap-y-2">
               <div>
