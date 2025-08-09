@@ -99,13 +99,14 @@ const projects = [
     category: "classification",
   },
   {
-    title: "booklens",
-    subtitle: "personalized book recommendation system",
-    description:
-      "recommends books based on user preferences using metadata filtering techniques.",
-    techStack: ["python", "fastapi", "flask", "next.js", "mysql", "mongodb"],
-    link: "https://github.com/daniyalrosli/BookLens",
-    category: "recommendation system",
+  title: "CoreDS",
+subtitle: "The Data Science Fundamentals Assistant ",
+description:
+  "CoreDS is an AI-powered, GPT-like interactive assistant focused on helping students master the fundamentals of data science. Unlike generic chatbots, CoreDS is tailored for learning: it answers questions, provides explanations, generates code snippets, and guides you through essential data science concepts in a conversational way.",
+techStack: ["python", "fastapi", "flask", "next.js", "mysql", "mongodb"],
+link: "https://github.com/daniyalrosli/CoreDS.git",
+category: "educational AI assistant",
+
   },
 
   {
