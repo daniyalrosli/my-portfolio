@@ -78,7 +78,7 @@ export default function ExperiencePage() {
         <Navbar />
         <section className="min-h-screen flex flex-col items-center px-4 py-28 max-w-2xl mx-auto space-y-16">
           <div className="text-center space-y-4 animate-fade-in">
-            <h1 className="text-3xl font-medium tracking-widest text-gray-900 dark:text-white">my journey</h1>
+            <h1 className="text-3xl font-medium tracking-widest text-gray-900 dark:text-white">work experiences</h1>
             <div className="w-12 h-[1px] bg-gray-300 dark:bg-white/20 mx-auto" />
           </div>
           <div className="relative w-full">
