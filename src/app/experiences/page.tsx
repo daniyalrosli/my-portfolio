@@ -16,10 +16,25 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    role: "product development engineer",
+    company: "advanced micro devices (amd)",
+    location: "penang, malaysia",
+    period: "september 2025 — present",
+    isRemote: false,
+    logo: "/img/amd.png",
+    points: [
+      "developing and optimizing product solutions for next-generation semiconductor technologies.",
+      "collaborating with cross-functional teams to drive product innovation and technical excellence.",
+      "analyzing product performance data and implementing improvements for enhanced functionality.",
+      "contributing to product roadmap planning and technical decision-making processes.",
+      "supporting product validation, testing, and quality assurance initiatives.",
+    ],
+  },
+  {
     role: "data analyst software engineer intern",
     company: "advanced micro devices (amd)",
     location: "penang, malaysia",
-    period: "march 2025 — present",
+    period: "march 2025 — september 2025",
     isRemote: false,
     logo: "/img/amd.png",
     points: [

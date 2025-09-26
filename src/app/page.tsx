@@ -74,7 +74,7 @@ export default function HomePage() {
             className="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-inter leading-relaxed px-4"
             variants={itemVariants}
           >
-            my curiosity is my biggest strength 
+            curiosity, data driven, and code obsessed.
           </motion.p>
 
           <motion.span
@@ -89,10 +89,50 @@ export default function HomePage() {
             variants={itemVariants}
           >
             a passionate student and tech explorer dedicated to transforming
-            ideas into impactful digital experiences. currently interning at amd
-            as a data analyst software engineer, building tools that empower
+            ideas into impactful digital experiences. currently working at{" "}
+            <span className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+              <Image
+                src="/img/amd.png"
+                alt="AMD"
+                width={24}
+                height={24}
+                className="inline-block"
+              />
+              
+            </span>{" "}
+            as a product development engineer, building tools that empower
             decisions.
           </motion.p>
+
+          <motion.div
+            className="flex justify-center pt-4"
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-red-600 via-orange-500 to-red-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div className="relative bg-white dark:bg-gray-900 px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/img/amd.png"
+                    alt="AMD Logo"
+                    width={32}
+                    height={32}
+                    className="opacity-90"
+                  />
+                  <div className="text-left">
+                    <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                      Product Development Engineer
+                    </div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">
+                      Advanced Micro Devices
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             className="pt-8"

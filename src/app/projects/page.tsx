@@ -98,16 +98,6 @@ const projects = [
     link: "https://github.com/daniyalrosli/TextFilter",
     category: "classification",
   },
-  {
-  title: "CoreDS",
-subtitle: "The Data Science Fundamentals Assistant ",
-description:
-  "CoreDS is an AI-powered, GPT-like interactive assistant focused on helping students master the fundamentals of data science. Unlike generic chatbots, CoreDS is tailored for learning: it answers questions, provides explanations, generates code snippets, and guides you through essential data science concepts in a conversational way.",
-techStack: ["python", "fastapi", "flask", "next.js", "mysql", "mongodb"],
-link: "https://github.com/daniyalrosli/CoreDS.git",
-category: "educational AI assistant",
-
-  },
 
   {
     title: "moodbite",
@@ -119,15 +109,6 @@ category: "educational AI assistant",
     category: "ai project",
   },
 
-  {
-    title: "reviewsense",
-    subtitle: "amazon review insights explorer",
-    description:
-      "a data visualization tool that helps uncover trends and insights from amazon product reviews using interactive dashboards.",
-    techStack: ["python", "pandas", "streamlit", "matplotlib", "seaborn", "altair"],
-    link: "https://github.com/daniyalrosli/reviewsense",
-    category: "data visualization",
-  },
 
 
 

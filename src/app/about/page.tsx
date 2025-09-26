@@ -68,7 +68,7 @@ export default function AboutPage() {
             graduate from uitm passionate about transforming complex data into meaningful insights.
           </p>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
-            currently interning at <span className="text-gray-900 dark:text-white font-medium">amd</span>,
+            currently product development engineer at <span className="text-gray-900 dark:text-white font-medium">amd</span>,
             i build tools that empower data-driven decisions. always up for learning something new, working with awesome teams, and writing on the side just for fun.
           </p>
         </motion.article>
