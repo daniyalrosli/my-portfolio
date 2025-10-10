@@ -7,16 +7,14 @@ import {
   FaChartLine,
   FaTools,
   FaChevronRight,
-} from "react-icons/fa"; // Import icons
+  FaCogs, // icon for product development
+} from "react-icons/fa";
 
-// animation variants for smooth fade-in
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
+    transition: { staggerChildren: 0.15 },
   },
 };
 
@@ -67,13 +65,21 @@ export default function SkillsPage() {
         "postman, vs code",
       ],
     },
+    {
+      title: "product development engineering",
+      icon: <FaCogs className="text-red-400" />,
+      items: [
+        "semiconductor product validation & testing",
+        "power bi dashboard design & reporting",
+        "data analysis & root cause investigation",
+        "cross-team collaboration & documentation",
+        "process improvement & automation",
+      ],
+    },
   ];
 
   return (
     <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans lowercase antialiased overflow-hidden relative">
-      {/* Removed background radial gradient and animations */}
-      {/* Removed <style jsx> block */}
-
       <Navbar />
 
       <section className="relative z-10 min-h-screen flex flex-col items-center px-4 sm:px-6 py-12 md:py-20 max-w-6xl mx-auto space-y-12">
@@ -84,8 +90,7 @@ export default function SkillsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-6xl font-extralight tracking-tighter text-gray-900 dark:text-white drop-shadow-none">
-            {/* Removed drop-shadow */}
+          <h1 className="text-4xl md:text-6xl font-extralight tracking-tighter">
             my skills
           </h1>
           <p className="text-base text-gray-600 dark:text-gray-300 max-w-md mx-auto font-light leading-relaxed">
@@ -95,8 +100,7 @@ export default function SkillsPage() {
             </span>{" "}
             and solve complex challenges.
           </p>
-          <div className="w-20 h-1 bg-gray-400 dark:bg-gray-600 mx-auto rounded-full mt-6" />{" "}
-          {/* Solid color divider */}
+          <div className="w-20 h-1 bg-gray-400 dark:bg-gray-600 mx-auto rounded-full mt-6" />
         </motion.header>
 
         {/* tech stack */}
@@ -112,10 +116,7 @@ export default function SkillsPage() {
               className="group relative p-7 bg-gray-50/50 dark:bg-gray-950/20 border border-gray-200/30 dark:border-gray-800/30 rounded-2xl backdrop-blur-md transition-all duration-500 hover:bg-gray-100/50 dark:hover:bg-gray-900/30 hover:border-blue-500/50 dark:hover:border-blue-700/50 hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-blue-900/20 transform hover:-translate-y-1"
               variants={itemVariants}
             >
-              {/* Removed optional background glow on hover */}
-              {/* <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-900/40 to-purple-900/40 pointer-events-none" /> */}
-
-              <div className="relative z-10 flex items-center mb-4 text-gray-900 dark:text-white">
+              <div className="relative z-10 flex items-center mb-4">
                 <span className="text-3xl mr-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                   {section.icon}
                 </span>
@@ -123,13 +124,13 @@ export default function SkillsPage() {
                   {section.title}
                 </h3>
               </div>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300 relative z-10">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 {section.items.map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center text-sm font-light group-hover:text-gray-700 dark:group-hover:text-gray-100 transition-colors duration-200"
                   >
-                    <FaChevronRight className="text-xs mr-2 text-blue-500 dark:text-blue-500 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />{" "}
+                    <FaChevronRight className="text-xs mr-2 text-blue-500 dark:text-blue-500 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />
                     {item}
                   </li>
                 ))}
@@ -138,8 +139,6 @@ export default function SkillsPage() {
           ))}
         </motion.div>
       </section>
-
-      {/* Removed simple keyframe animation for background elements */}
     </main>
   );
 }
