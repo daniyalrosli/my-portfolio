@@ -3,7 +3,6 @@ import Navbar from "./components/navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Inter, Poppins } from "next/font/google";
-import Link from "next/link";
 
 // font setup
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -81,77 +80,21 @@ export default function HomePage() {
             className="block text-xl md:text-2xl text-gray-700 dark:text-white/70 font-medium pt-2"
             variants={itemVariants}
           >
-            tech enthusiast & forever learner
+          
           </motion.span>
 
           <motion.p
             className="text-md md:text-lg text-gray-500 dark:text-gray-400 leading-relaxed pt-3 px-4"
             variants={itemVariants}
           >
-            a passionate student and tech explorer dedicated to transforming
-            ideas into impactful digital experiences. currently working at{" "}
-            <span className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
-              <Image
-                src="/img/amd.png"
-                alt="AMD"
-                width={24}
-                height={24}
-                className="inline-block"
-              />
-              
-            </span>{" "}
-            as a product development engineer, building tools that empower
-            decisions.
+     
           </motion.p>
 
-          <motion.div
-            className="flex justify-center pt-4"
-            variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-red-600 via-orange-500 to-red-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-              <div className="relative bg-white dark:bg-gray-900 px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <Image
-                    src="/img/amd.png"
-                    alt="AMD Logo"
-                    width={32}
-                    height={32}
-                    className="opacity-90"
-                  />
-                  <div className="text-left">
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                      Product Development Engineer
-                    </div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">
-                      Advanced Micro Devices
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="pt-8"
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
-          >
-            <Link href="/projects" passHref>
-              <motion.a
-                className="inline-block border border-gray-900 dark:border-white px-8 py-3 rounded-full text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                check out my projects
-              </motion.a>
-            </Link>
-          </motion.div>
         </motion.div>
       </section>
     </main>
   );
 }
+
+         
+    
