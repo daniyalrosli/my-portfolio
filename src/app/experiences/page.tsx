@@ -16,18 +16,23 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    role: "product development engineer",
+    role: "product development engineer 1",
     company: "advanced micro devices (amd)",
     location: "penang, malaysia",
     period: "september 2025 — present",
     isRemote: false,
     logo: "/img/amd.png",
     points: [
-      "developing and optimizing product solutions for next-generation semiconductor technologies.",
-      "collaborating with cross-functional teams to drive product innovation and technical excellence.",
-      "analyzing product performance data and implementing improvements for enhanced functionality.",
-      "contributing to product roadmap planning and technical decision-making processes.",
-      "supporting product validation, testing, and quality assurance initiatives.",
+     "managing engineering material configurations and enabling part numbers to support hardware development and prototype builds.",
+
+"analyzing demand data, system kit requirements, and cost categories to ensure accurate planning for engineering projects.",
+
+"tracking material readiness, approvals, and build status using internal engineering tools and project dashboards.",
+
+"collaborating with cross-functional engineering, supply chain, and program teams to resolve configuration issues and align build requirements.",
+
+"developing an interactive power bi dashboard to improve visibility of engineering spend, material usage, and project metrics through automated reporting.",
+
     ],
   },
   {
