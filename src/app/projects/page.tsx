@@ -109,7 +109,25 @@ const projects = [
     category: "ai project",
   },
 
-
+  {
+title: "zakat dashboard",
+subtitle: "zakat dashboard for poverty alleviation",
+description:
+"a simple intelligent system that helps users calculate zakat obligations based on income, savings, and assets.",
+techStack: ["next.js", "python", "tailwind css", "data analysis"],
+link: "https://github.com/daniyalrosli/zakat_project.git",
+category: "islamic finance",
+  },
+  
+  {
+title: "bnpl credit risk assessment",
+subtitle: "buy now pay later credit risk assessment",
+description:
+"analyzes customer data to assess credit risk for buy now pay later services.",
+techStack: ["next.js", "python", "tailwind css", "data analysis"],
+link: "https://github.com/daniyalrosli/bnpl-.git",
+category: "islamic finance",
+  }, 
 
 
 ];
