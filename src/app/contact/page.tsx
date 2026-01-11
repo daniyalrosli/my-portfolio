@@ -1,85 +1,51 @@
 "use client";
 import Navbar from "../components/navbar";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const socialLinks = [
   {
-    icon: <FaGithub size={28} />,
+    icon: <FaGithub size={20} />,
     url: "https://github.com/daniyalrosli",
-    name: "GitHub",
+    name: "github",
   },
   {
-    icon: <FaLinkedin size={28} />,
+    icon: <FaLinkedin size={20} />,
     url: "https://www.linkedin.com/in/daniyal-rosli-4384731b0/",
-    name: "LinkedIn",
+    name: "linkedin",
   },
   {
-    icon: <FaInstagram size={28} />,
+    icon: <FaInstagram size={20} />,
     url: "https://www.instagram.com/daniyalrsli_/",
-    name: "Instagram",
+    name: "instagram",
   },
 ];
 
 export default function ContactPage() {
   return (
-    <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen relative overflow-hidden">
-      {/* Background Decorations */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-gray-900 dark:border-white rotate-45 animate-pulse" />
-        <div
-          className="absolute top-60 right-32 w-24 h-24 border border-gray-900 dark:border-white rounded-full animate-ping"
-          style={{ animationDuration: "3s" }}
-        />
-        <div
-          className="absolute bottom-40 left-1/3 w-16 h-16 border border-gray-900 dark:border-white animate-bounce"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute bottom-20 right-20 w-20 h-20 border border-gray-900 dark:border-white rotate-12 animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-gray-900 dark:bg-white rounded-full opacity-20 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
-
+    <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen">
       <Navbar />
 
-      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-16 relative z-10 max-w-4xl mx-auto space-y-12">
-        <div className="text-center group space-y-6">
-          <div className="inline-block p-3 rounded-full border border-gray-300 dark:border-white/20 hover:border-gray-500 dark:hover:border-white/60 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 cursor-pointer">
-            <FaEnvelope
-              size={20}
-              className="text-gray-900 dark:text-white transition-transform duration-300 group-hover:scale-125"
-            />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-thin tracking-wider hover:tracking-widest transition-all duration-700 cursor-default text-gray-900 dark:text-white">
-            contact me
-          </h1>
-          <div className="w-24 h-px bg-gray-900 dark:bg-white mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000" />
-        </div>
+      <section className="pt-28 pb-20 px-6 max-w-2xl mx-auto">
+        <h1 className="text-2xl font-medium tracking-tight text-gray-900 dark:text-white mb-4">
+          contact
+        </h1>
+        <p className="text-gray-500 dark:text-gray-400 text-sm mb-12">
+          feel free to reach out.
+        </p>
 
-        {/* Social Media Icons */}
-        <div className="flex gap-12">
-          {socialLinks.map(({ icon, url, name }, i) => (
+        {/* Social Links */}
+        <div className="space-y-4">
+          {socialLinks.map(({ icon, url, name }) => (
             <a
-              key={i}
+              key={name}
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={name}
-              className="text-gray-600 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+              className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors py-2"
             >
               {icon}
+              <span className="text-sm">{name}</span>
+              <span className="text-gray-400 dark:text-gray-600 ml-auto">→</span>
             </a>
           ))}
         </div>
