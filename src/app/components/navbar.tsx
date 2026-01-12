@@ -31,6 +31,7 @@ export default function Navbar() {
             <li><Link href="/about" className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">about</Link></li>
             <li><Link href="/experiences" className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">experience</Link></li>
             <li><Link href="/projects" className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">projects</Link></li>
+            <li><Link href="/photography" className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">photography</Link></li>
             <li><Link href="/contact" className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">contact</Link></li>
           </ul>
           <ThemeToggle />
