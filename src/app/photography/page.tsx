@@ -19,6 +19,15 @@ const photos = [
   { src: "/img/photography/photo13.jpeg", alt: "photo 13" },
   { src: "/img/photography/photo14.jpeg", alt: "photo 14" },
   { src: "/img/photography/photo15.jpeg", alt: "photo 15" },
+  { src: "/img/photography/photo16.jpeg", alt: "photo 16" },
+  { src: "/img/photography/photo17.jpeg", alt: "photo 17" },
+  { src: "/img/photography/photo18.jpeg", alt: "photo 18" },
+  { src: "/img/photography/photo19.jpeg", alt: "photo 19" },
+  { src: "/img/photography/photo20.jpeg", alt: "photo 20" },
+  { src: "/img/photography/photo21.jpeg", alt: "photo 21" },
+  { src: "/img/photography/photo22.jpeg", alt: "photo 22" },
+  { src: "/img/photography/photo23.jpeg", alt: "photo 23" },
+  { src: "/img/photography/photo24.jpeg", alt: "photo 24" },
 ];
 
 export default function PhotographyPage() {
