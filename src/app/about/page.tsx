@@ -1,7 +1,14 @@
 "use client";
 import Navbar from "../components/navbar";
+import { useEffect, useState } from "react";
 
 export default function AboutPage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const skills = [
     "python",
     "machine learning",
@@ -14,7 +21,7 @@ export default function AboutPage() {
     <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen lowercase">
       <Navbar />
 
-      <section className="pt-28 pb-20 px-6 max-w-2xl mx-auto">
+      <section className={`pt-28 pb-20 px-6 max-w-2xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         {/* Header */}
         <h1 className="text-2xl font-medium tracking-tight text-gray-900 dark:text-white mb-12">
           about

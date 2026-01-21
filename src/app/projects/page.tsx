@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "../components/navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -84,14 +84,19 @@ const projects = [
 
 export default function ProjectsPage() {
   const [showAll, setShowAll] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const displayedProjects = showAll ? projects : projects.slice(0, 6);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   return (
     <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen">
       <Navbar />
 
       {/* Header */}
-      <section className="pt-28 pb-16 px-6 max-w-3xl mx-auto">
+      <section className={`pt-28 pb-16 px-6 max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <h1 className="text-2xl font-medium tracking-tight text-gray-900 dark:text-white">
           projects
         </h1>

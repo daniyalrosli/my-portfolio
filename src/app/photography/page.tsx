@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "../components/navbar";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const photos = [
   { src: "/img/photography/photo1.jpeg", alt: "photo 1" },
@@ -32,12 +32,17 @@ const photos = [
 
 export default function PhotographyPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   return (
     <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen">
       <Navbar />
 
-      <section className="pt-28 pb-20 px-6 max-w-4xl mx-auto">
+      <section className={`pt-28 pb-20 px-6 max-w-4xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <h1 className="text-2xl font-medium tracking-tight text-gray-900 dark:text-white mb-4">
           photography
         </h1>
