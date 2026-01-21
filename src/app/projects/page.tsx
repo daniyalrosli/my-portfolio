@@ -85,10 +85,14 @@ const projects = [
 export default function ProjectsPage() {
   const [showAll, setShowAll] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [showTechStack, setShowTechStack] = useState(false);
   const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
   useEffect(() => {
     setIsVisible(true);
+    // Delay tech stack animation
+    const timer = setTimeout(() => setShowTechStack(true), 400);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -96,13 +100,35 @@ export default function ProjectsPage() {
       <Navbar />
 
       {/* Header */}
-      <section className={`pt-28 pb-16 px-6 max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <section className={`pt-28 pb-8 px-6 max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <h1 className="text-2xl font-medium tracking-tight text-gray-900 dark:text-white">
           projects
         </h1>
         <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
           a collection of my work in data science, machine learning, and development.
         </p>
+
+        {/* Tech Stack Summary */}
+        <div className={`mt-8 border border-gray-200 dark:border-gray-800 rounded-lg p-4 transition-all duration-700 delay-200 ${showTechStack ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className="text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-3">
+            tech stack
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["python", "next.js", "django", "flask", "tensorflow", "scikit-learn", "power bi", "sql", "nlp", "machine learning"].map((tech, index) => (
+              <span
+                key={tech}
+                className="text-xs text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 rounded px-2 py-1 transition-all duration-300"
+                style={{ 
+                  opacity: showTechStack ? 1 : 0,
+                  transform: showTechStack ? 'translateY(0)' : 'translateY(8px)',
+                  transitionDelay: `${index * 50 + 300}ms`
+                }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Projects List - Single Column Minimalist */}
@@ -129,15 +155,14 @@ export default function ProjectsPage() {
               </span>
             </div>
             
-            {/* Tech stack - subtle */}
-            <div className="flex gap-2 mt-3">
-              {project.techStack.slice(0, 3).map((tech, i) => (
+            {/* Tech stack - with box */}
+            <div className="flex flex-wrap gap-2 mt-3">
+              {project.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="text-xs text-gray-400 dark:text-gray-500"
+                  className="text-xs text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-800 rounded px-2 py-0.5"
                 >
                   {tech}
-                  {i < Math.min(project.techStack.length, 3) - 1 && " ·"}
                 </span>
               ))}
             </div>
