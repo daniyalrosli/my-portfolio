@@ -61,7 +61,7 @@ export default function AboutPage() {
         {/* Resume */}
         <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-900">
           <a
-            href="/img/resume_daniyal.pdf"
+            href="/img/Resume Daniyal.pdf"
             download
             className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >

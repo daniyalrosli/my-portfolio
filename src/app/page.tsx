@@ -4,32 +4,49 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
-  const quote = "Always keep learning and be curious";
+  const quotes = [
+    "Always keep learning and be curious",
+    "Code is poetry written in logic",
+    "Data tells a story, listen carefully",
+    "Simplicity is the ultimate sophistication",
+    "Build things that matter"
+  ];
+  
+  const [quoteIndex, setQuoteIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
-
+  const [isTyping, setIsTyping] = useState(true);
   const [showQuoteBox, setShowQuoteBox] = useState(false);
 
+  const currentQuote = quotes[quoteIndex];
+
+  // Show quote box with delay
   useEffect(() => {
-    // Delay showing the quote box
-    const boxTimer = setTimeout(() => setShowQuoteBox(true), 500);
-
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index <= quote.length) {
-        setDisplayedText(quote.slice(0, index));
-        index++;
-      } else {
-        clearInterval(interval);
-        setTimeout(() => setShowCursor(false), 1000);
-      }
-    }, 80);
-
-    return () => {
-      clearInterval(interval);
-      clearTimeout(boxTimer);
-    };
+    const timer = setTimeout(() => setShowQuoteBox(true), 500);
+    return () => clearTimeout(timer);
   }, []);
+
+  // Typing effect
+  useEffect(() => {
+    if (isTyping) {
+      if (displayedText.length < currentQuote.length) {
+        const timer = setTimeout(() => {
+          setDisplayedText(currentQuote.slice(0, displayedText.length + 1));
+        }, 80);
+        return () => clearTimeout(timer);
+      } else {
+        // Finished typing, wait then switch
+        const timer = setTimeout(() => {
+          setIsTyping(false);
+        }, 3000);
+        return () => clearTimeout(timer);
+      }
+    } else {
+      // Reset and move to next quote
+      setDisplayedText("");
+      setQuoteIndex((prev) => (prev + 1) % quotes.length);
+      setIsTyping(true);
+    }
+  }, [displayedText, isTyping, currentQuote, quotes.length]);
 
   return (
     <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen flex flex-col">
@@ -68,7 +85,7 @@ export default function HomePage() {
             <div className="border border-gray-200 dark:border-gray-800 rounded-lg px-6 py-4">
               <p className="text-gray-500 dark:text-gray-400 text-sm italic">
                 &quot;{displayedText}
-                <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>&quot;
+                <span className="opacity-100 transition-opacity">|</span>&quot;
               </p>
             </div>
           </div>
@@ -77,6 +94,3 @@ export default function HomePage() {
     </main>
   );
 }
-
-         
-    
