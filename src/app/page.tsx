@@ -54,14 +54,18 @@ export default function HomePage() {
 
       <section className="flex-1 flex items-center justify-center px-6">
         <div className="max-w-xl text-center space-y-8">
-          {/* Profile Image with subtle ring */}
-          <div className="relative w-32 h-32 mx-auto">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-900" />
+          {/* Profile Image with elegant frame */}
+          <div className="relative w-48 h-48 mx-auto">
+            {/* Outer decorative ring */}
+            <div className="absolute -inset-2 rounded-full border-2 border-gray-200 dark:border-gray-700 opacity-50" />
+            {/* Inner solid ring */}
+            <div className="absolute inset-0 rounded-full border-4 border-gray-300 dark:border-gray-600 shadow-lg" />
+            {/* Image */}
             <Image
-              src="/img/p.jpeg"
+              src="/img/t.png"
               alt="Daniyal Rosli"
-              width={128}
-              height={128}
+              width={192}
+              height={192}
               className="relative rounded-full object-cover w-full h-full p-1"
               priority
             />
