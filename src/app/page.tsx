@@ -76,7 +76,7 @@ export default function HomePage() {
               daniyal rosli
             </h1>
             <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-widest font-light">
-              product engineer
+              forever learner
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light">
               data • design • code
