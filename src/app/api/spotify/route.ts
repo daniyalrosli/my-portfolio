@@ -34,15 +34,25 @@ async function getNowPlaying(access_token: string) {
       },
     });
 
-    if (response.status === 204 || response.status === 200) {
+    if (response.status === 204) {
+      // No content - nothing is playing
+      return {
+        isPlaying: false,
+        item: null,
+      };
+    }
+
+    if (response.status === 200) {
       const song = await response.json();
       return {
-        isPlaying: response.status === 200 && song.is_playing,
+        isPlaying: song.is_playing,
         ...song,
       };
     }
+
     return null;
-  } catch {
+  } catch (error) {
+    console.error('getNowPlaying error:', error);
     return null;
   }
 }

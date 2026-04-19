@@ -3,7 +3,7 @@
 import { useSpotify, NowPlayingData } from './useSpotify';
 
 export function NowPlaying() {
-  const { data, isLoading } = useSpotify('now-playing');
+  const { data, isLoading, error } = useSpotify('now-playing');
   
   const nowPlaying = data?.nowPlaying as NowPlayingData | undefined;
   const isPlaying = nowPlaying?.isPlaying;
@@ -24,7 +24,9 @@ export function NowPlaying() {
   if (!track) {
     return (
       <div className="text-center py-6 text-gray-600">
-        <div className="text-sm font-light">not playing</div>
+        <div className="text-sm font-light">
+          {error ? `spotify error: ${error}` : 'not playing'}
+        </div>
       </div>
     );
   }
@@ -34,9 +36,10 @@ export function NowPlaying() {
       href={track.external_urls.spotify}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block space-y-4 cursor-pointer"
+      className="group block space-y-3 cursor-pointer inline-block w-full"
     >
-      <div className="relative overflow-hidden bg-gray-900 aspect-square rounded-sm">
+      {/* Album Artwork */}
+      <div className="relative overflow-hidden bg-gray-900 aspect-square rounded-lg shadow-lg w-32 h-32 mx-auto">
         {track.album.images[0] && (
           <img
             src={track.album.images[0].url}
@@ -45,31 +48,16 @@ export function NowPlaying() {
           />
         )}
         {isPlaying && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-        )}
-        {isPlaying && (
-          <div className="absolute bottom-3 left-3 flex gap-1">
-            {[0, 1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="w-1 h-2 bg-white rounded-full"
-                style={{
-                  animation: `pulse 0.6s ease-in-out infinite`,
-                  animationDelay: `${i * 0.1}s`,
-                }}
-              />
-            ))}
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         )}
       </div>
-      <div className="space-y-1">
-        <div className="text-xs text-gray-500 uppercase tracking-widest">
-          {isPlaying ? 'now playing' : 'last played'}
-        </div>
-        <h3 className="text-lg font-light text-gray-100 leading-tight group-hover:text-white transition-colors">
+
+      {/* Track Info */}
+      <div className="space-y-1 text-center">
+        <h3 className="text-sm font-light text-gray-100 group-hover:text-white transition-colors line-clamp-2">
           {track.name}
         </h3>
-        <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+        <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors line-clamp-1">
           {track.artists.map((a) => a.name).join(', ')}
         </p>
       </div>
