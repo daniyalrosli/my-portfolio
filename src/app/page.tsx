@@ -75,7 +75,7 @@ export default function HomePage() {
             <h1 className="text-4xl sm:text-5xl font-light tracking-tight text-gray-900 dark:text-white">
               daniyal rosli
             </h1>
-            <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-widest font-light">
+            <p className="text-xs text-gray-500 dark:text-gray-400 lowercase tracking-widest font-light">
               forever learner
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light">
@@ -94,12 +94,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Spotify Widget */}
-      <section className="px-4 sm:px-6 py-8 border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-md mx-auto">
-          <SpotifyWidget />
-        </div>
-      </section>
+    
     </main>
   );
 }
