@@ -11,9 +11,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
-    slug: 'getting-started-with-nextjs',
-    title: 'Getting Started with Next.js',
-    excerpt: 'A beginner-friendly guide to building modern web applications with Next.js and React.',
+    slug: 'my-role-at-amd',
+    title: 'My Role at AMD',
+    excerpt: 'A look at my responsibilities and contributions on the AMD team.',
     content: `Next.js is a powerful React framework that makes building full-stack web applications easier than ever. In this post, we'll explore the basics and get you started.
 
 ## Why Next.js?
@@ -48,13 +48,13 @@ That's it! You now have a fully functional Next.js development environment.
 
 Start exploring the Next.js documentation and build something amazing!`,
     date: '2024-04-15',
-    tags: ['Next.js', 'React', 'Web Development']
+    tags: ['AMD', 'Career', 'Supply Chain']
   },
   {
     id: '2',
-    slug: 'learning-typescript',
-    title: 'Why I Switched to TypeScript',
-    excerpt: 'Exploring the benefits of TypeScript and how it improved my development workflow.',
+    slug: 'advanced-data-analytics-demand-supply',
+    title: 'How I Integrate Advanced Data Analytics into Demand Supply Process',
+    excerpt: 'How advanced data analytics can transform demand and supply planning workflows.',
     content: `TypeScript has become an essential tool in my development toolkit. Here's why I made the switch and why you should consider it too.
 
 ## Type Safety
@@ -93,49 +93,7 @@ Yes, there is a learning curve, but the benefits far outweigh the initial invest
 
 TypeScript has made me a better developer. I recommend giving it a try!`,
     date: '2024-04-10',
-    tags: ['TypeScript', 'JavaScript', 'Learning']
-  },
-  {
-    id: '3',
-    slug: 'data-visualization-tips',
-    title: 'Tips for Effective Data Visualization',
-    excerpt: 'Learn how to present data in a way that tells a compelling story.',
-    content: `Data visualization is an art and science. Here are my favorite tips for creating effective visualizations.
-
-## Choose the Right Chart Type
-
-Different data types benefit from different visualizations:
-- **Bar charts:** Comparing categories
-- **Line charts:** Showing trends over time
-- **Scatter plots:** Exploring relationships
-- **Pie charts:** Showing proportions (use sparingly!)
-
-## Keep It Simple
-
-- Remove unnecessary elements (chart junk)
-- Use a clear, consistent color palette
-- Label axes and provide titles
-- Avoid 3D effects that don't add value
-
-## Tell a Story
-
-Your visualization should guide the viewer through your data:
-1. Start with the headline (main insight)
-2. Provide context with supporting visuals
-3. End with actionable insights
-
-## Tools I Use
-
-- D3.js for custom visualizations
-- Chart.js for quick charts
-- Tableau for business dashboards
-- Matplotlib for data science projects
-
-## Final Thoughts
-
-Remember, your goal is to help people understand your data, not to create the most elaborate chart possible. Clarity trumps complexity every time!`,
-    date: '2024-04-05',
-    tags: ['Data', 'Visualization', 'Design']
+    tags: ['Data Analytics', 'Demand Planning', 'Supply Chain']
   }
 ];
 
