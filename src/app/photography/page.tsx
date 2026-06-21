@@ -1,112 +1,24 @@
 "use client";
-import Navbar from "../components/navbar";
-import Image from "next/image";
-import { useState, useEffect } from "react";
 
-const photos = [
-  { src: "/img/photography/photo1.jpeg", alt: "photo 1" },
-  { src: "/img/photography/photo2.jpeg", alt: "photo 2" },
-  { src: "/img/photography/photo3.jpeg", alt: "photo 3" },
-  { src: "/img/photography/photo4.jpeg", alt: "photo 4" },
-  { src: "/img/photography/photo5.jpeg", alt: "photo 5" },
-  { src: "/img/photography/photo6.jpeg", alt: "photo 6" },
-  { src: "/img/photography/photo7.jpeg", alt: "photo 7" },
-  { src: "/img/photography/photo8.jpeg", alt: "photo 8" },
-  { src: "/img/photography/photo9.jpeg", alt: "photo 9" },
-  { src: "/img/photography/photo10.jpeg", alt: "photo 10" },
-  { src: "/img/photography/photo11.jpeg", alt: "photo 11" },
-  { src: "/img/photography/photo12.jpeg", alt: "photo 12" },
-  { src: "/img/photography/photo13.jpeg", alt: "photo 13" },
-  { src: "/img/photography/photo14.jpeg", alt: "photo 14" },
-  { src: "/img/photography/photo15.jpeg", alt: "photo 15" },
-  { src: "/img/photography/photo16.jpeg", alt: "photo 16" },
-  { src: "/img/photography/photo17.jpeg", alt: "photo 17" },
-  { src: "/img/photography/photo18.jpeg", alt: "photo 18" },
-  { src: "/img/photography/photo19.jpeg", alt: "photo 19" },
-  { src: "/img/photography/photo20.jpeg", alt: "photo 20" },
-  { src: "/img/photography/photo21.jpeg", alt: "photo 21" },
-  { src: "/img/photography/photo22.jpeg", alt: "photo 22" },
-  { src: "/img/photography/photo23.jpeg", alt: "photo 23" },
-  { src: "/img/photography/photo24.jpeg", alt: "photo 24" },
-];
+import Navbar from "../components/navbar";
+import PhotographyGallery from "./PhotographyGallery";
 
 export default function PhotographyPage() {
-  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
-    <main className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen">
+    <main className="bg-[#faf8f5] dark:bg-[#0c0a09] text-gray-900 dark:text-white min-h-screen overflow-x-hidden">
       <Navbar />
 
-      <section className={`pt-28 pb-20 px-6 max-w-4xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <h1 className="text-2xl font-medium tracking-tight text-gray-900 dark:text-white mb-4">
-          photography
-        </h1>
-        <p className="text-gray-500 dark:text-gray-400 text-sm mb-12">
-          moments captured through my lens. Using photography as a hobby to escape my engineering world 
-        </p>
+      {/* Subtle film grain */}
+      <div
+        className="fixed inset-0 pointer-events-none z-30 opacity-[0.035] dark:opacity-[0.05] mix-blend-multiply dark:mix-blend-soft-light"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        }}
+      />
 
-        {/* Photo Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              className="aspect-square relative overflow-hidden bg-gray-100 dark:bg-gray-900 cursor-pointer"
-              onClick={() => setSelectedPhoto(photo.src)}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                quality={90}
-                className="object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Empty state - show this if no photos yet */}
-        {photos.length === 0 && (
-          <p className="text-gray-400 dark:text-gray-600 text-center py-20">
-            coming soon...
-          </p>
-        )}
+      <section className="pt-28 pb-20 px-4 sm:px-6 max-w-5xl mx-auto relative">
+        <PhotographyGallery />
       </section>
-
-      {/* Lightbox Modal */}
-      {selectedPhoto && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-pointer"
-          onClick={() => setSelectedPhoto(null)}
-        >
-          {/* Close button */}
-          <button
-            className="absolute top-6 right-6 text-white/70 hover:text-white text-2xl transition-colors"
-            onClick={() => setSelectedPhoto(null)}
-          >
-            ×
-          </button>
-
-          {/* Full size image */}
-          <div className="relative w-full h-full max-w-6xl max-h-[90vh]">
-            <Image
-              src={selectedPhoto}
-              alt="Full size photo"
-              fill
-              sizes="100vw"
-              quality={100}
-              priority
-              className="object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
-      )}
     </main>
   );
 }
